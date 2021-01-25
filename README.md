@@ -1,1 +1,1 @@
-# newsfeed.loc
+# newsfeed

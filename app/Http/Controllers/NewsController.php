@@ -1,0 +1,55 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\News;
+use Illuminate\Support\Facades\Validator;
+use vendor\autoload;
+use Carbon\Carbon;
+
+class NewsController extends Controller
+{
+public function setNews(Request $request){
+    $title2 = $request->input('title');
+    $dounloadFile = $request->file('dounloadFile');
+    $firstText = $request->input('firstText');
+    $lastText = $request->input('lastText');
+    $category = $request->input('category');
+    $category2 = $request->input('category2');
+    $radios = $request->input('radios');
+
+//    $this->validate($request,[
+//        'title'=>'required|max:100',
+//        'dounloadFile'=>'required|max:100',
+//        'firstText'=>'required|max:200',
+//        'lastText'=>'required',
+//        'category'=>'required|max:100',
+//        'category2'=>'required|max:100',
+//        'radios'=>'required'
+//    ]);
+
+
+    //echo $title,$dounloadFile,$firstText,$lastText,$category,$category2,$radios;
+
+    $carbon = new Carbon();
+
+    News::create(['title'=>$title2,'imgName'=>"null",
+        'text1'=>$firstText,'text2'=>$lastText,
+        'firstCategory'=>$category,
+        'lastCategory'=>$category2,
+        'sliderPosition'=>$radios,
+        'create_at'=>$carbon->format('d.m.Y'),
+        'update_at'=>null
+        ]);
+
+    $maxId = News::max('id');
+    $dounloadFile->move('items',$maxId.".jpg");
+
+    $update = News::find($maxId);
+    $update->imgName = $maxId.".jpg";
+    $update->save();
+
+    return back();
+}
+}
