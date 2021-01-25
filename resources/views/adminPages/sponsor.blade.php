@@ -1,5 +1,5 @@
 @include('includes.admin.admin_header')
-        <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+<div class="app-sidebar__overlay" data-toggle="sidebar"></div>
 <aside class="app-sidebar">
 
     <ul class="side-menu">
@@ -7,9 +7,9 @@
             <a class="side-menu__item" data-toggle="slide" href="index-2.html#"><i class="side-menu__icon fa fa-desktop"></i><span class="side-menu__label">Գլխավոր էջ</span><i class="angle fa fa-angle-right"></i></a>
             <ul class="slide-menu">
                 <li><a class="slide-item" href="{{route('getRunningLine')}}">Վազող տող</a></li>
-                <li><a class="slide-item active" href="{{route('getSlider')}}">Սլայդեր</a></li>
+                <li><a class="slide-item" href="{{route('getSlider')}}">Սլայդեր</a></li>
                 <li><a class="slide-item" href="{{route('getNews')}}">Նորություններ (News)</a></li>
-                <li><a class="slide-item" href="{{route('getSponsor')}}">Հովանավոր (Sponsor)</a></li>
+                <li><a class="slide-item active" href="{{route('getSponsor')}}">Հովանավոր (Sponsor)</a></li>
             </ul>
         </li>
         <li class="slide">
@@ -26,57 +26,56 @@
                 <li><a class="slide-item" href="index2.html">...</a></li>
             </ul>
         </li>
-
-
-
     </ul>
 </aside>
 
-
 <!-- Main Content-->
-        <div class="app-content  my-3 my-md-5">
-            <div class="side-app">
-                @include('includes.admin.admin_pages_header')
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-title">Добавить новую картинку в слайдер</div>
-                            </div>
-                            <div class="card-body p-6">
-                                <div class="wizard-container">
-                                    <div class="wizard-card m-0" data-color="red" id="wizardProfile">
-                                        <form class="card">
-                                            <div class="form-group">
-                                                <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" name="example-file-input-custom">
-                                                    <label class="custom-file-label">проверте файл наведя курсор сюда</label>
+<div class="app-content  my-3 my-md-5">
+    <div class="side-app">
+        @include('includes.admin.admin_pages_header')
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Ավելացնել հովանավոր</div>
+                    </div>
+                    <div class="card-body p-6">
+                        <div class="wizard-container">
+                            <div class="wizard-card m-0" data-color="red" id="wizardProfile">
+                                <form class="card" action="{{route('setSponsor')}}" method="post" enctype='multipart/form-data'>
+                                    @csrf
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" value="{{old("dounloadFile")}}" name="dounloadFile">
+                                                <label class="custom-file-label">ընտրեք ֆայլը</label>
+                                            </div>
+                                        </div>
 
-                                                </div>
-                                            </div>
-                                            <div class="form-footer">
-                                                <button type="submit" class="btn btn-primary btn-block">добавить</button>
-                                            </div>
+
                                     </div>
-                                </div> <!-- wizard container -->
+                                    <button type="submit" class="btn btn-primary btn-block">Հաստատել</button>
+                                </form>
                             </div>
-                        </div>
+                        </div> <!-- wizard container -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--footer-->
-    <footer class="footer">
-        <div class="container">
-            <div class="row align-items-center flex-row-reverse">
-                <div class="col-md-12 col-sm-12 mt-3 mt-lg-0 text-center">
-                    Copyright © 2018 <a href="#">adminor</a>. Designed by <a href="#">Spruko</a> All rights reserved.
-                </div>
+</div>
+</div>
+<!--footer-->
+<footer class="footer">
+    <div class="container">
+        <div class="row align-items-center flex-row-reverse">
+            <div class="col-md-12 col-sm-12 mt-3 mt-lg-0 text-center">
+                Copyright © 2021 <a href="#">Karen Aroyan</a> All rights reserved.
             </div>
         </div>
-    </footer>
-    <!-- End Footer-->		</div>
+    </div>
+</footer>
+<!-- End Footer-->		</div>
 <!-- End Page -->
 <!-- Back to top -->
 <a href="#top" id="back-to-top" style="display: inline;"><i class="fa fa-angle-up"></i></a>

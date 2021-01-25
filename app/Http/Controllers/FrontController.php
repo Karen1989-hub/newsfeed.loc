@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\News;
+use App\Models\Advertising;
 
 
 class FrontController extends Controller
@@ -31,6 +32,8 @@ class FrontController extends Controller
 
         $newsfeed = News::orderBy('id','desc')->limit(5)->get();
 
+        $sponsors = Advertising::all();
+
 
         $arr = ['slider' => $slider,
             'news' => $news, 'newsLast' => $newsLast,
@@ -38,7 +41,8 @@ class FrontController extends Controller
             'technologys' => $technologys, 'technologysLast' => $technologysLast,
             'medicine' => $medicine, 'medicineLast' => $medicineLast,
             'lifeStyle' => $lifeStyle,
-            'newsfeed' => $newsfeed
+            'newsfeed' => $newsfeed,
+            'sponsors' => $sponsors
         ];
         return view('home', $arr);
     }
@@ -46,9 +50,9 @@ class FrontController extends Controller
     public function getSingelPage($id){
         $singelNews = News::where('id',$id)->get();
         $newsfeed = News::orderBy('id','desc')->limit(5)->get();
+        $sponsors = Advertising::all();
 
-
-        $arr = ['singelNews'=>$singelNews,'newsfeed'=>$newsfeed];
+        $arr = ['singelNews'=>$singelNews,'newsfeed'=>$newsfeed,'sponsors' => $sponsors];
         return view('singelPage',$arr);
     }
 }

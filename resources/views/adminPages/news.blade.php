@@ -8,13 +8,8 @@
             <ul class="slide-menu">
                 <li><a class="slide-item" href="{{route('getRunningLine')}}">Վազող տող</a></li>
                 <li><a class="slide-item" href="{{route('getSlider')}}">Սլայդեր</a></li>
-                <li><a class="slide-item" href="#">Լրահոս</a></li>
                 <li><a class="slide-item active" href="{{route('getNews')}}">Նորություններ (News)</a></li>
-                <li><a class="slide-item" href="index2.html">Կյանք և ոճ (Life & Style)</a></li>
-                <li><a class="slide-item" href="index2.html">Սպորտ (Sport)</a></li>
-                <li><a class="slide-item" href="index2.html">Տեխնոլոգիաներ (Technology)</a></li>
-                <li><a class="slide-item" href="index2.html">Հովանավոր (Sponsor)</a></li>
-                <li><a class="slide-item" href="index2.html">Բժշկություն (Medicine)</a></li>
+                <li><a class="slide-item" href="{{route('getSponsor')}}">Հովանավոր (Sponsor)</a></li>
             </ul>
         </li>
         <li class="slide">

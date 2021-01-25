@@ -8,8 +8,10 @@
                         <ul class="business_catgnav  wow fadeInDown">
                             <li>
                                 @if(count($newsLast) != 0)
-                                    <figure class="bsbig_fig"><a href="singel/{{$newsLast[0]->id}}" class="featured_img"> <img alt=""
-                                                                                                           src="../../public/items/{{$newsLast[0]->imgName}}">                                            <span class="overlay"></span> </a>
+                                    <figure class="bsbig_fig"><a href="singel/{{$newsLast[0]->id}}"
+                                                                 class="featured_img"> <img alt=""
+                                                                                            src="../../public/items/{{$newsLast[0]->imgName}}">
+                                            <span class="overlay"></span> </a>
                                         <figcaption><a href="singel/{{$newsLast[0]->id}}">{{$newsLast[0]->title}}</a>
                                         </figcaption>
                                         <p>{{$newsLast[0]->text1}}</p>
@@ -43,11 +45,13 @@
                             <ul class="business_catgnav wow fadeInDown">
                                 <li>
                                     @if(count($sportsLast) != 0)
-                                        <figure class="bsbig_fig"><a href="singel/{{$sportsLast[0]->id}}" class="featured_img">
+                                        <figure class="bsbig_fig"><a href="singel/{{$sportsLast[0]->id}}"
+                                                                     class="featured_img">
                                                 <img alt="error" src="../../public/items/{{$sportsLast[0]->imgName}}">
                                                 <span
                                                     class="overlay"></span> </a>
-                                            <figcaption><a href="singel/{{$sportsLast[0]->id}}">{{$sportsLast[0]->title}}</a>
+                                            <figcaption><a
+                                                    href="singel/{{$sportsLast[0]->id}}">{{$sportsLast[0]->title}}</a>
                                             </figcaption>
                                             <p>{{$sportsLast[0]->text1}}</p>
                                         </figure>
@@ -78,9 +82,10 @@
                             <ul class="business_catgnav">
                                 @if(count($technologysLast) != 0)
                                     <li>
-                                        <figure class="bsbig_fig wow fadeInDown"><a href="singel/{{$technologysLast[0]->id}}"
-                                                                                    class="featured_img"> <img alt=""
-                                                                                                               src="../../public/items/{{$technologysLast[0]->imgName}}">
+                                        <figure class="bsbig_fig wow fadeInDown"><a
+                                                href="singel/{{$technologysLast[0]->id}}"
+                                                class="featured_img"> <img alt=""
+                                                                           src="../../public/items/{{$technologysLast[0]->imgName}}">
                                                 <span class="overlay"></span> </a>
                                             <figcaption><a
                                                     href="singel/{{$technologysLast[0]->id}}">{{$technologysLast[0]->title}}</a>
@@ -120,7 +125,8 @@
                                             <img
                                                 src="../../public/items/{{$medicineLast[0]->imgName}}" alt=""> <span
                                                 class="overlay"></span> </a>
-                                        <figcaption><a href="singel/{{$medicineLast[0]->id}}">{{$medicineLast[0]->title}}</a>
+                                        <figcaption><a
+                                                href="singel/{{$medicineLast[0]->id}}">{{$medicineLast[0]->title}}</a>
                                         </figcaption>
                                         <p>{{$medicineLast[0]->text1}}</p>
                                     </figure>
@@ -154,19 +160,26 @@
                     <ul class="spost_nav">
                         @if(count($lifeStyle) != 0)
                             @foreach($lifeStyle as $val)
-                        <li>
-                            <div class="media wow fadeInDown"><a href="singel/{{$val->id}}" class="media-left"> <img
-                                        alt="" src="../../public/items/{{$val->imgName}}"> </a>
-                                <div class="media-body"><a href="singel/{{$val->id}}" class="catg_title">{{$val->title}}</a></div>
-                            </div>
-                        </li>
+                                <li>
+                                    <div class="media wow fadeInDown"><a href="singel/{{$val->id}}" class="media-left">
+                                            <img
+                                                alt="" src="../../public/items/{{$val->imgName}}"> </a>
+                                        <div class="media-body"><a href="singel/{{$val->id}}"
+                                                                   class="catg_title">{{$val->title}}</a></div>
+                                    </div>
+                                </li>
                             @endforeach
                         @endif
                     </ul>
                 </div>
                 <div class="single_sidebar wow fadeInDown">
                     <h2><span>Sponsor</span></h2>
-                    <a class="sideAdd" href="#"><img src="../../public/images/add_img.jpg" alt=""></a></div>
+                    @if(isset($sponsors))
+                        @foreach($sponsors as $val)
+                            <a class="sideAdd" href="#"><img src="../../public/sponsorsImg/{{$val->sponsorImg}}" alt=""></a>
+                        @endforeach
+                    @endif
+                </div>
             </aside>
         </div>
     </div>

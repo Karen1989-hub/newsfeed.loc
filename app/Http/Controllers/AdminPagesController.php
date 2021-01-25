@@ -22,5 +22,11 @@ class AdminPagesController extends Controller
         $arr = ['text1'=>$row->text1,'text2'=>$row->text2];
             return view('adminPages.news',$arr);
     }
+    public function getSponsor(){
+        $row = Admin_pages_header_content::find(4);
+        $arr = ['text1'=>$row->text1,'text2'=>$row->text2];
+        return view('adminPages.sponsor',$arr);
+    }
+
 
 }

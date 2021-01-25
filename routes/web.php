@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminLoginController;
 use App\Http\Controllers\AdminPagesController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\AdvertisingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +47,8 @@ Route::prefix("/admin")->group(function(){
     Route::get('/getSlider',[AdminPagesController::class,'getSlider'])->name('getSlider');
     Route::get('/getNews',[AdminPagesController::class,'getNews'])->name('getNews');
     Route::post("/setNews",[NewsController::class,'setNews'])->name('setNews');
+    Route::get("/getSponsor",[AdminPagesController::class,'getSponsor'])->name('getSponsor');
+    Route::post("/setSponsor",[AdvertisingController::class,'setSponsor'])->name('setSponsor');
 });
 
 
