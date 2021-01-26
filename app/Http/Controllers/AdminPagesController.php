@@ -27,6 +27,12 @@ class AdminPagesController extends Controller
         $arr = ['text1'=>$row->text1,'text2'=>$row->text2];
         return view('adminPages.sponsor',$arr);
     }
+    public function getDeleteNewsPage(){
+        $row = Admin_pages_header_content::find(5);
+        $arr = ['text1'=>$row->text1,'text2'=>$row->text2];
+        return view('adminPages.deleteNews',$arr);
+    }
+
 
 
 }

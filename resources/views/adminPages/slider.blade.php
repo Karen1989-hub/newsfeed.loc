@@ -10,6 +10,7 @@
                 <li><a class="slide-item active" href="{{route('getSlider')}}">Սլայդեր</a></li>
                 <li><a class="slide-item" href="{{route('getNews')}}">Նորություններ (News)</a></li>
                 <li><a class="slide-item" href="{{route('getSponsor')}}">Հովանավոր (Sponsor)</a></li>
+                <li><a class="slide-item" href="{{route('getDeleteNewsPage')}}">Անջատել հայտարարությունը</a></li>
             </ul>
         </li>
         <li class="slide">

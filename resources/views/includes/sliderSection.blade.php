@@ -3,9 +3,9 @@
         <div class="col-lg-8 col-md-8 col-sm-8">
             <div class="slick_slider">
                 @foreach($slider as $val)
-                <div class="single_iteam"> <a href='items/{{$val->imgName}}'> <img src="../../public/items/{{$val->imgName}}" alt="error"></a>
+                <div class="single_iteam"> <a href='singel/{{$val->id}}'> <img src="../../public/items/{{$val->imgName}}" alt="error"></a>
                     <div class="slider_article">
-                        <h2><a class="slider_tittle" href='items/{{$val->imgName}}'>{{$val->title}}</a></h2>
+                        <h2><a class="slider_tittle" href='singel/{{$val->id}}'>{{$val->title}}</a></h2>
                         <p>{{$val->text1}}</p>
                     </div>
                 </div>

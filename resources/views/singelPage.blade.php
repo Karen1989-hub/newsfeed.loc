@@ -9,7 +9,7 @@
                     <ol class="breadcrumb">
                         <li><a href="../index.html">Home</a></li>
                         <li><a href="#">{{$singelNews[0]->firstCategory}}</a></li>
-                        @if($singelNews[0]->lastCategor != null)
+                        @if($singelNews[0]->lastCategory != null)
                             <li class="active">
                                 {{$singelNews[0]->lastCategory}}
                             </li>

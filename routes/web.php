@@ -49,6 +49,8 @@ Route::prefix("/admin")->group(function(){
     Route::post("/setNews",[NewsController::class,'setNews'])->name('setNews');
     Route::get("/getSponsor",[AdminPagesController::class,'getSponsor'])->name('getSponsor');
     Route::post("/setSponsor",[AdvertisingController::class,'setSponsor'])->name('setSponsor');
+    Route::get("/getDeleteNewsPage",[AdminPagesController::class,'getDeleteNewsPage'])->name('getDeleteNewsPage');
+    Route::get("/getDeleteNewsCategory",[NewsController::class,'getDeleteNewsCategory'])->name('getDeleteNewsCategory');
 });
 
 
