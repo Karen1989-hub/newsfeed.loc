@@ -64,7 +64,14 @@ class NewsController extends Controller
             $news = News::where('firstCategory','=',$category)->get();
         }
         $arr = ['news'=>$news,'text1'=>$text1,'text2'=>$text2];
-
         return view('adminPages.deleteNews',$arr);
+    }
+
+    public function deleteNews($id){
+        $delNews = News::find($id);
+        unlink("items/".$delNews->imgName);
+        News::destroy($id);
+
+        return back();
     }
 }

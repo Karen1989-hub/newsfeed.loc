@@ -16,6 +16,7 @@ class CreateAdvertisingsTable extends Migration
         Schema::create('advertisings', function (Blueprint $table) {
             $table->id();
             $table->string('sponsorImg');
+            $table->string('link');
             $table->timestamps();
         });
     }

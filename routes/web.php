@@ -24,9 +24,6 @@ Route::get('/karen', function () {
     return view('welcome');
 });
 
-Route::get('/singel', function (){
-   return view('singelPage');
-   });
 Route::get('/singel/{id}', [FrontController::class,'getSingelPage'])->name('getSingelPage');
 
 Route::fallback(function (){
@@ -51,6 +48,11 @@ Route::prefix("/admin")->group(function(){
     Route::post("/setSponsor",[AdvertisingController::class,'setSponsor'])->name('setSponsor');
     Route::get("/getDeleteNewsPage",[AdminPagesController::class,'getDeleteNewsPage'])->name('getDeleteNewsPage');
     Route::get("/getDeleteNewsCategory",[NewsController::class,'getDeleteNewsCategory'])->name('getDeleteNewsCategory');
+    Route::get("/deleteNews/{id}",[NewsController::class,"deleteNews"])->name('deleteNews');
+    Route::get("/getDeleteSponsorPage",[AdminPagesController::class,"getDeleteSponsorPage"])->name('getDeleteSponsorPage');
+    Route::get("/deleteSponsor/{id}",[AdvertisingController::class,"deleteSponsor"])->name('deleteSponsor');
+
+
 });
 
 

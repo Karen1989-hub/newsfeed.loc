@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Admin_pages_header_content;
+use App\Models\Advertising;
 
 class AdminPagesController extends Controller
 {
@@ -31,6 +32,12 @@ class AdminPagesController extends Controller
         $row = Admin_pages_header_content::find(5);
         $arr = ['text1'=>$row->text1,'text2'=>$row->text2];
         return view('adminPages.deleteNews',$arr);
+    }
+    public function getDeleteSponsorPage(){
+        $row = Admin_pages_header_content::find(6);
+        $sponsors = Advertising::all();
+        $arr = ['text1'=>$row->text1,'text2'=>$row->text2,'sponsors'=>$sponsors];
+        return view('adminPages.deleteSponsor',$arr);
     }
 
 

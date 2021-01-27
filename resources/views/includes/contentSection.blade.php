@@ -176,7 +176,7 @@
                     <h2><span>Sponsor</span></h2>
                     @if(isset($sponsors))
                         @foreach($sponsors as $val)
-                            <a class="sideAdd" href="#"><img src="../../public/sponsorsImg/{{$val->sponsorImg}}" alt=""></a>
+                            <a class="sideAdd" href="{{$val->link}}"><img src="../../public/sponsorsImg/{{$val->sponsorImg}}" alt=""></a>
                         @endforeach
                     @endif
                 </div>

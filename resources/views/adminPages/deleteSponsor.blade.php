@@ -12,8 +12,8 @@
                 <li><a class="slide-item" href="{{route('getSlider')}}">Սլայդեր</a></li>
                 <li><a class="slide-item" href="{{route('getNews')}}">Նորություններ (News)</a></li>
                 <li><a class="slide-item" href="{{route('getSponsor')}}">Հովանավոր (Sponsor)</a></li>
-                <li><a class="slide-item active" href="{{route('getDeleteNewsPage')}}">Անջատել հայտարարությունը</a></li>
-                <li><a class="slide-item" href="{{route('getDeleteSponsorPage')}}">Ջնջել հովանավորին</a></li>
+                <li><a class="slide-item" href="{{route('getDeleteNewsPage')}}">Անջատել հայտարարությունը</a></li>
+                <li><a class="slide-item active" href="{{route('getDeleteSponsorPage')}}">Ջնջել հովանավորին</a></li>
             </ul>
         </li>
         <li class="slide">
@@ -47,51 +47,33 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <div class="card-title">Նորությունների ցուցակ</div>
+                        <div class="card-title">Հովանավորների ցուցակ</div>
                     </div>
                     <div class="card-body p-6">
                         <div class="wizard-container">
                             <div class="wizard-card m-0" data-color="red" id="wizardProfile">
-                                <form class="card" action="{{route('getDeleteNewsCategory')}}" method="get">
-                                    <div class="card-body">
-                                        <div class="form-group">
-                                            <label class="form-label">Ընտրել կատեգորիան</label>
-                                            <select value="{{old("category2")}}" name="category" id="select-countries"
-                                                    class="form-control select2 custom-select">
-                                                <option value="all">Բոլորը</option>
-                                                <option value="news">Նորություններ</option>
-                                                <option value="life">Կյանք և ոճ</option>
-                                                <option value="sport">Սպորտ</option>
-                                                <option value="technology">Տեխնոլոգիաներ</option>
-                                                <option value="medicine">Բժշկություն</option>
-                                            </select>
-                                        </div>
 
-
-                                    </div>
-                                    <button type="submit" class="btn btn-primary btn-block">Հաստատել</button>
-                                </form>
                                 <!-- start list -->
                                 <div class="row row-deck">
-                                    @if(isset($news))
-                                        @foreach($news as $val)
-                                    <div class="col-md-12 col-lg-12 col-xl-4">
-                                        <div class="card card-blog-overlay" style="background-image: url('../../public/items/{{$val->imgName}}')">
-                                            <div class="card-header z-index2 ">
-                                                <h3 class="card-title text-white ">{{$val->title}}</h3>
-                                                <div class="card-options">
-                                                    <a href="#" class="card-options-collapse"
-                                                       data-toggle="card-collapse"><i
-                                                            class="fe fe-chevron-up text-white"></i></a>
-                                                    <a href="deleteNews/{{$val->id}}" class="card-options-remove" data-toggle=""><i
-                                                            class="fe fe-x text-white"></i></a>
+                                    @if(isset($sponsors))
+                                        @foreach($sponsors as $val)
+                                            <div class="col-md-12 col-lg-12 col-xl-4">
+                                                <div class="card card-blog-overlay" style="background-image: url('../../public/sponsorsImg/{{$val->sponsorImg}}');height: 200px">
+                                                    <div class="card-header z-index2 ">
+
+                                                        <div class="card-options">
+                                                            <a href="#" class="card-options-collapse"
+                                                               data-toggle="card-collapse"><i
+                                                                    class="fe fe-chevron-up text-white"></i></a>
+                                                            <a href="deleteSponsor/{{$val->id}}" class="card-options-remove" data-toggle=""><i
+                                                                    class="fe fe-x text-white"></i></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-body  text-white">
+                                                        {{$val->text1}}
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="card-body  text-white">
-                                                {{$val->text1}}
-                                            </div>
-                                        </div>
-                                    </div>
                                         @endforeach
                                     @endif
                                 </div>

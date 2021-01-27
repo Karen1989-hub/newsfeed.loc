@@ -11,6 +11,7 @@
                 <li><a class="slide-item" href="{{route('getNews')}}">Նորություններ (News)</a></li>
                 <li><a class="slide-item active" href="{{route('getSponsor')}}">Հովանավոր (Sponsor)</a></li>
                 <li><a class="slide-item" href="{{route('getDeleteNewsPage')}}">Անջատել հայտարարությունը</a></li>
+                <li><a class="slide-item" href="{{route('getDeleteSponsorPage')}}">Ջնջել հովանավորին</a></li>
             </ul>
         </li>
         <li class="slide">
@@ -52,8 +53,10 @@
                                                 <label class="custom-file-label">ընտրեք ֆայլը</label>
                                             </div>
                                         </div>
-
-
+                                        <div class="form-group">
+                                            <label class="form-label">Գովազդի հղումը</label>
+                                            <input type="text" class="form-control" value="{{ old('title') }}" name="link" placeholder="լինկ"  style="padding-left: 10px">
+                                        </div>
                                     </div>
                                     <button type="submit" class="btn btn-primary btn-block">Հաստատել</button>
                                 </form>
