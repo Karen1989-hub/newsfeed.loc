@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\News;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\View\Middleware\ShareErrorsFromSession;
 use vendor\autoload;
 use Carbon\Carbon;
 
@@ -20,15 +21,14 @@ class NewsController extends Controller
         $category2 = $request->input('category2');
         $radios = $request->input('radios');
 
-//    $this->validate($request,[
-//        'title'=>'required|max:100',
-//        'dounloadFile'=>'required|max:100',
-//        'firstText'=>'required|max:200',
-//        'lastText'=>'required',
-//        'category'=>'required|max:100',
-//        'category2'=>'required|max:100',
-//        'radios'=>'required'
-//    ]);
+    $this->validate($request,[
+        'title'=>'required|max:200',
+        'dounloadFile'=>'required|max:200',
+        'firstText'=>'required|max:200',
+        'lastText'=>'required',
+        'category'=>'required|max:100',
+
+    ]);
 
 
         //echo $title,$dounloadFile,$firstText,$lastText,$category,$category2,$radios;

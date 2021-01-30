@@ -4,7 +4,9 @@
 
     <ul class="side-menu">
         <li class="slide">
-            <a class="side-menu__item" data-toggle="slide" href="index-2.html#"><i class="side-menu__icon fa fa-desktop"></i><span class="side-menu__label">Գլխավոր էջ</span><i class="angle fa fa-angle-right"></i></a>
+            <a class="side-menu__item" data-toggle="slide" href="index-2.html#"><i
+                    class="side-menu__icon fa fa-desktop"></i><span class="side-menu__label">Գլխավոր էջ</span><i
+                    class="angle fa fa-angle-right"></i></a>
             <ul class="slide-menu">
                 <li><a class="slide-item" href="{{route('getRunningLine')}}">Վազող տող</a></li>
                 <li><a class="slide-item" href="{{route('getSlider')}}">Սլայդեր</a></li>
@@ -15,14 +17,20 @@
             </ul>
         </li>
         <li class="slide">
-            <a class="side-menu__item" data-toggle="slide" href="index-2.html#"><i class="side-menu__icon fa fa-dollar" data-toggle="tooltip" title="fa fa-dollar"></i><span class="side-menu__label">---</span><i class="angle fa fa-angle-right"></i></a>
+            <a class="side-menu__item" data-toggle="slide" href="index-2.html#"><i class="side-menu__icon fa fa-dollar"
+                                                                                   data-toggle="tooltip"
+                                                                                   title="fa fa-dollar"></i><span
+                    class="side-menu__label">---</span><i class="angle fa fa-angle-right"></i></a>
             <ul class="slide-menu">
                 <li><a class="slide-item" href="index.html">...</a></li>
                 <li><a class="slide-item" href="index2.html">...</a></li>
             </ul>
         </li>
         <li class="slide">
-            <a class="side-menu__item" data-toggle="slide" href="index-2.html#"><i class="side-menu__icon ti-bag" data-toggle="tooltip" title="ti-bag"></i><span class="side-menu__label">---</span><i class="angle fa fa-angle-right"></i></a>
+            <a class="side-menu__item" data-toggle="slide" href="index-2.html#"><i class="side-menu__icon ti-bag"
+                                                                                   data-toggle="tooltip"
+                                                                                   title="ti-bag"></i><span
+                    class="side-menu__label">---</span><i class="angle fa fa-angle-right"></i></a>
             <ul class="slide-menu">
                 <li><a class="slide-item" href="index.html">...</a></li>
                 <li><a class="slide-item" href="index2.html">...</a></li>
@@ -44,30 +52,49 @@
                     <div class="card-body p-6">
                         <div class="wizard-container">
                             <div class="wizard-card m-0" data-color="red" id="wizardProfile">
-                                <form class="card" action="{{route('setNews')}}" method="post" enctype='multipart/form-data'>
+                                @if ($errors->any())
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
+                                <form class="card" action="{{route('setNews')}}" method="post"
+                                      enctype='multipart/form-data'>
                                     @csrf
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label class="form-label">Նշել վերնագիրը</label>
-                                            <input type="text" class="form-control" value="{{ old('title') }}" name="title" placeholder="Վերնագիր"  style="padding-left: 10px">
+                                            <input type="text" class="form-control" value="{{ old('title') }}"
+                                                   name="title" placeholder="Վերնագիր" style="padding-left: 10px">
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-file">
-                                                <input type="file" class="custom-file-input" value="{{old("dounloadFile")}}" name="dounloadFile">
+                                                <input type="file" class="custom-file-input"
+                                                       value="{{old("dounloadFile")}}" name="dounloadFile">
                                                 <label class="custom-file-label">ընտրեք ֆայլը</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="form-label">Նախնական տեքստ <span class="form-label-small ml-3"></span></label>
-                                            <textarea class="form-control" value="{{old("firstText")}}" name="firstText" rows="5"  placeholder="Տեքստ..." style="padding: 0 10px;height: 80px;"></textarea>
+                                            <label class="form-label">Նախնական տեքստ <span
+                                                    class="form-label-small ml-3"></span></label>
+                                            <textarea class="form-control" value="{{old("firstText")}}" name="firstText"
+                                                      rows="5" placeholder="Տեքստ..."
+                                                      style="padding: 0 10px;height: 80px;"></textarea>
                                         </div>
                                         <div class="form-group">
-                                            <label class="form-label">Հիմնական տեքստ <span class="form-label-small ml-3"></span></label>
-                                            <textarea class="form-control" value="{{old("lastText")}}" name="lastText" rows="10"  placeholder="Տեքստ..." style="padding: 0 10px;height: 200px;"></textarea>
+                                            <label class="form-label">Հիմնական տեքստ <span
+                                                    class="form-label-small ml-3"></span></label>
+                                            <textarea class="form-control" value="{{old("lastText")}}" name="lastText"
+                                                      rows="10" placeholder="Տեքստ..."
+                                                      style="padding: 0 10px;height: 200px;"></textarea>
                                         </div>
                                         <div class="form-group">
                                             <label class="form-label">Սկզբնական կատեգորիա</label>
-                                            <select value="{{old('category')}}" name="category" id="select-countries" class="form-control select2 custom-select">
+                                            <select value="{{old('category')}}" name="category" id="select-countries"
+                                                    class="form-control select2 custom-select">
                                                 <option value="news">Նորություններ</option>
                                                 <option value="life">Կյանք և ոճ</option>
                                                 <option value="sport">Սպորտ</option>
@@ -77,14 +104,16 @@
                                         </div>
 
                                         <div class="form-group ">
-                                           <div class="form-label">Տեղադրել նաև սլայդերում ?</div>
+                                            <div class="form-label">Տեղադրել նաև սլայդերում ?</div>
                                             <div class="custom-controls-stacked">
                                                 <label class="custom-control custom-radio">
-                                                    <input type="radio" class="custom-control-input" name="radios" value="yes">
+                                                    <input type="radio" class="custom-control-input" name="radios"
+                                                           value="yes">
                                                     <span class="custom-control-label">Այո</span>
                                                 </label>
                                                 <label class="custom-control custom-radio">
-                                                    <input type="radio" class="custom-control-input" name="radios" value="no" checked>
+                                                    <input type="radio" class="custom-control-input" name="radios"
+                                                           value="no" checked>
                                                     <span class="custom-control-label">Ոչ</span>
                                                 </label>
                                             </div>
@@ -92,7 +121,8 @@
 
                                         <div class="form-group">
                                             <label class="form-label">Երկրորդական կատեգորիա</label>
-                                            <select value="{{old("category2")}}" name="category2" id="select-countries" class="form-control select2 custom-select">
+                                            <select value="{{old("category2")}}" name="category2" id="select-countries"
+                                                    class="form-control select2 custom-select">
                                                 <option value="null">null</option>
                                                 <option value="footbol">Ֆուտբոլ</option>
                                                 <option value="basketbol">Բասկետբոլ</option>
@@ -121,7 +151,7 @@
         </div>
     </div>
 </footer>
-<!-- End Footer-->		</div>
+<!-- End Footer-->        </div>
 <!-- End Page -->
 <!-- Back to top -->
 <a href="#top" id="back-to-top" style="display: inline;"><i class="fa fa-angle-up"></i></a>
