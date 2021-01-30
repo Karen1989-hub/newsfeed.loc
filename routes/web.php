@@ -19,22 +19,13 @@ use App\Http\Controllers\AdvertisingController;
 */
 
 Route::get('/', [FrontController::class,'getHomePage'])->name('home');
-
-Route::get('/karen', function () {
-    return view('welcome');
-});
-
+Route::get('/karen', function () {return view('welcome');});
 Route::get('/singel/{id}', [FrontController::class,'getSingelPage'])->name('getSingelPage');
-
-Route::fallback(function (){
-    return view('errors.404');
-});
-
+Route::get('/allNews/{category}',[FrontController::class,'getAllNews'])->name('getAllNews');
+Route::fallback(function (){return view('errors.404');});
 
 //check admin user
-Route::get('/admin',function (){
-    return view('adminPages.adminLogin');
-});
+Route::get('/admin',function (){return view('adminPages.adminLogin');});
 Route::post('/admin/checkAdmin',[AdminLoginController::class,'checkAdmin'])->name('checkAdmin');
 Route::get('/signOut',[AdminLoginController::class,'signOut'])->name('signOut');
 

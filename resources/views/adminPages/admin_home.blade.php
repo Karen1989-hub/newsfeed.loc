@@ -6,11 +6,11 @@
         <li class="slide">
             <a class="side-menu__item" data-toggle="slide" href="index-2.html#"><i class="side-menu__icon fa fa-desktop"></i><span class="side-menu__label">Գլխավոր էջ</span><i class="angle fa fa-angle-right"></i></a>
             <ul class="slide-menu">
-                <li><a class="slide-item" href="{{route('getRunningLine')}}">Վազող տող</a></li>
-                <li><a class="slide-item active" href="{{route('getSlider')}}">Սլայդեր</a></li>
+                <li><a class="slide-item active" href="{{route('getRunningLine')}}">Վազող տող</a></li>
+                <li><a class="slide-item" href="{{route('getSlider')}}">Սլայդեր</a></li>
                 <li><a class="slide-item" href="{{route('getNews')}}">Նորություններ (News)</a></li>
                 <li><a class="slide-item" href="{{route('getSponsor')}}">Հովանավոր (Sponsor)</a></li>
-                <li><a class="slide-item" href="{{route('getDeleteNewsPage')}}">Անջատել հայտարարությունը</a></li>
+                <li><a class="slide-item" href="{{route('getDeleteNewsPage')}}">Ջնջել հայտարարությունը</a></li>
                 <li><a class="slide-item" href="{{route('getDeleteSponsorPage')}}">Ջնջել հովանավորին</a></li>
             </ul>
         </li>

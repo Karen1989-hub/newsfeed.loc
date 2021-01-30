@@ -55,4 +55,10 @@ class FrontController extends Controller
         $arr = ['singelNews'=>$singelNews,'newsfeed'=>$newsfeed,'sponsors' => $sponsors];
         return view('singelPage',$arr);
     }
+    public function getAllNews($category="all"){
+        if($category == "all"){
+            $news = News::all();
+            return view('allNewsPage',compact($news));
+        }
+    }
 }
