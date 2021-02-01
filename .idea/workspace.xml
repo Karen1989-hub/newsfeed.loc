@@ -4,12 +4,9 @@
     <list default="true" id="f4ffe40c-9396-4086-8d09-995d2cd23799" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/admin_home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/admin_home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/deleteNews.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/deleteNews.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/deleteSponsor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/deleteSponsor.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/adminPages/news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/news.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/slider.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/sponsor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/sponsor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/allNewsPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/allNewsPage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -141,8 +138,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/proektNews/newsfeed" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -212,6 +210,9 @@
       <workItem from="1611914757961" duration="4558000" />
       <workItem from="1612018511670" duration="221000" />
       <workItem from="1612025399398" duration="6631000" />
+      <workItem from="1612083270385" duration="176000" />
+      <workItem from="1612084473509" duration="3911000" />
+      <workItem from="1612170935091" duration="17804000" />
     </task>
     <servers />
   </component>

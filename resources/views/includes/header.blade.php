@@ -14,6 +14,16 @@
     <link rel="stylesheet" type="text/css" href="../../public/assets/css/jquery.fancybox.css">
     <link rel="stylesheet" type="text/css" href="../../public/assets/css/theme.css">
     <link rel="stylesheet" type="text/css" href="../../public/assets/css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('}assets/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/animate.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/font.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/li-scroller.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/slick.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/jquery.fancybox.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/theme.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
     <!--[if lt IE 9]>
     <script src="../../public/assets/js/html5shiv.min.js"></script>
     <script src="../../public/assets/js/respond.min.js"></script>
@@ -68,11 +78,12 @@
                                 </div>
                             </form>
 
-                            <ul class="nav navbar-nav navbar-right ">
-                                <li><a href="#" class="lang"><img src="../../public/images/armenia.png"></a></li>
-                                <li><a href="#" class="lang"><img src="../../public/images/russia.png"></a></li>
-                                <li><a href="#" class="lang"><img src="../../public/images/united-kingdom.png"></a></li>
-                            </ul>
+{{--                            flags--}}
+{{--                            <ul class="nav navbar-nav navbar-right ">--}}
+{{--                                <li><a href="#" class="lang"><img src="../../public/images/armenia.png"></a></li>--}}
+{{--                                <li><a href="#" class="lang"><img src="../../public/images/russia.png"></a></li>--}}
+{{--                                <li><a href="#" class="lang"><img src="../../public/images/united-kingdom.png"></a></li>--}}
+{{--                            </ul>--}}
 
 
                         </div>
@@ -98,22 +109,23 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav main_nav">
-                    <li class="active"><a href="index.html"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Home</span></a></li>
-                    <li><a href="#">News</a></li>
-                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sport</a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Football</a></li>
-                            <li><a href="#">Basketball</a></li>
-                            <li><a href="#">Tennis</a></li>
-                            <li><a href="#">Boxing</a></li>
-                            <li><a href="#">Chess</a></li>
-                            <li><a href="#">Wrestling</a></li>
-                            <li><a href="#">Other Sports</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Life & Style</a></li>
-                    <li><a href="#">Medicine</a></li>
-                    <li><a href="#">Technology</a></li>
+                    <li class="active"><a href="{{route('home')}}"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Home</span></a></li>
+                    <li><a href="/allNews/news/">News</a></li>
+{{--                    <li class="dropdown"> <a href="/allNews/sport/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sport</a>--}}
+{{--                        <ul class="dropdown-menu" role="menu">--}}
+{{--                            <li><a href="/allNews/sport/">Football</a></li>--}}
+{{--                            <li><a href="/allNews/sport/">Basketball</a></li>--}}
+{{--                            <li><a href="/allNews/sport/">Tennis</a></li>--}}
+{{--                            <li><a href="/allNews/sport/">Boxing</a></li>--}}
+{{--                            <li><a href="/allNews/sport/">Chess</a></li>--}}
+{{--                            <li><a href="/allNews/sport/">Wrestling</a></li>--}}
+{{--                            <li><a href="/allNews/sport/">Other Sports</a></li>--}}
+{{--                        </ul>--}}
+{{--                    </li>--}}
+                    <li><a href="/allNews/sport/">Sport</a></li>
+                    <li><a href="/allNews/life/">Life & Style</a></li>
+                    <li><a href="/allNews/medicine/">Medicine</a></li>
+                    <li><a href="/allNews/technology/">Technology</a></li>
 
                 </ul>
             </div>

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -30,7 +31,7 @@ class FrontController extends Controller
 
         $lifeStyle = News::where('firstCategory', '=', 'life')->orderBy('id', 'desc')->limit(5)->get();
 
-        $newsfeed = News::orderBy('id','desc')->limit(5)->get();
+        $newsfeed = News::orderBy('id', 'desc')->limit(5)->get();
 
         $sponsors = Advertising::all();
 
@@ -47,18 +48,33 @@ class FrontController extends Controller
         return view('home', $arr);
     }
 
-    public function getSingelPage($id){
-        $singelNews = News::where('id',$id)->get();
-        $newsfeed = News::orderBy('id','desc')->limit(5)->get();
+    public function getSingelPage($id)
+    {
+        $singelNews = News::where('id', $id)->get();
+        $newsfeed = News::orderBy('id', 'desc')->limit(5)->get();
         $sponsors = Advertising::all();
 
-        $arr = ['singelNews'=>$singelNews,'newsfeed'=>$newsfeed,'sponsors' => $sponsors];
-        return view('singelPage',$arr);
+        $arr = ['singelNews' => $singelNews, 'newsfeed' => $newsfeed, 'sponsors' => $sponsors];
+        return view('singelPage', $arr);
     }
-    public function getAllNews($category="all"){
-        if($category == "all"){
-            $news = News::all();
-            return view('allNewsPage',compact($news));
-        }
+
+    public function getAllNews($firstCategory, $page=1)
+    {
+        //newsfeed
+        $newsfeed = News::limit(5)->get();
+
+        //sponsor
+        $advertising = Advertising::all();
+
+        //get news for category and pagination
+        $count = News::where('firstCategory', $firstCategory)->count('id');
+        $count = ceil($count / 10);
+        $newsOffset = ($page-1)*10;
+        $news = News::where('firstCategory', $firstCategory)->orderBy('id', 'desc')->offset($newsOffset)->limit(10)->get();
+
+        $arr = ['news' => $news, 'count' => $count, 'page' => $page, 'newsfeed' => $newsfeed, 'advertising' => $advertising];
+
+        return view('allNewsPage',$arr);
+
     }
 }

@@ -21,7 +21,7 @@ use App\Http\Controllers\AdvertisingController;
 Route::get('/', [FrontController::class,'getHomePage'])->name('home');
 Route::get('/karen', function () {return view('welcome');});
 Route::get('/singel/{id}', [FrontController::class,'getSingelPage'])->name('getSingelPage');
-Route::get('/allNews/{category}',[FrontController::class,'getAllNews'])->name('getAllNews');
+Route::get('/allNews/{firstCategory}/{page?}',[FrontController::class,'getAllNews'])->name('getAllNews');
 Route::fallback(function (){return view('errors.404');});
 
 //check admin user

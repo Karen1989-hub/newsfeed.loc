@@ -127,6 +127,10 @@
                                                 <option value="footbol">Ֆուտբոլ</option>
                                                 <option value="basketbol">Բասկետբոլ</option>
                                                 <option value="tenis">Թենիս</option>
+                                                <option value="boxing">Բոքս</option>
+                                                <option value="chess">Շախմատ</option>
+                                                <option value="wrestling">Ռեսլինգ</option>
+                                                <option value="other_sports">այլ սպոռտաձև</option>
                                             </select>
                                         </div>
                                     </div>
