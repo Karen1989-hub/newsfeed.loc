@@ -61,8 +61,8 @@
                         </div>
                         <div class="collapse navbar-collapse" id="myNavbar">
                             <ul class="nav navbar-nav">
-                                <li><a href="index.html">Գլխավոր</a></li>
-                                <li><a href="index.html">Մեր Մասին</a></li>
+                                <li><a href="{{route('home')}}">Գլխավոր</a></li>
+                                <li><a href="{{route('aboutUs')}}">Մեր Մասին</a></li>
                                 <li><a href="pages/contact.html">Հետադարձ Կապ</a></li>
                             </ul>
 

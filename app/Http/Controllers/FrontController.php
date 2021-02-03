@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\News;
 use App\Models\Advertising;
+use App\Models\AboutUs;
 
 
 class FrontController extends Controller
@@ -75,6 +76,21 @@ class FrontController extends Controller
         $arr = ['news' => $news, 'count' => $count, 'page' => $page, 'newsfeed' => $newsfeed, 'advertising' => $advertising];
 
         return view('allNewsPage',$arr);
+    }
 
+    public function aboutUs(){
+        //newsfeed
+        $newsfeed = News::limit(5)->get();
+
+        //sponsor
+        $advertising = Advertising::all();
+
+        //aboutUsTexts
+        $pageTexts = AboutUs::where('id',1)->get();
+
+        $arr = ['newsfeed'=>$newsfeed,'advertising'=>$advertising,
+            'aboutUsText'=>$pageTexts[0]->aboutUsText,'questions'=>$pageTexts[0]->questions];
+
+        return view('aboutUsPage',$arr);
     }
 }

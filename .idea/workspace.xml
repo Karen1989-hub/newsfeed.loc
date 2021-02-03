@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4ffe40c-9396-4086-8d09-995d2cd23799" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/aboutUsPage.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/adminPages/aboutUs.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/includes/newsfeedEndSponsor.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminPagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminPagesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_29_142601_create_categories_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/admin_home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/admin_home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/deleteNews.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/deleteNews.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/deleteSponsor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/deleteSponsor.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/adminPages/news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/news.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/slider.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/sponsor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/sponsor.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/allNewsPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/allNewsPage.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -212,11 +223,26 @@
       <workItem from="1612025399398" duration="6631000" />
       <workItem from="1612083270385" duration="176000" />
       <workItem from="1612084473509" duration="3911000" />
-      <workItem from="1612170935091" duration="17804000" />
+      <workItem from="1612170935091" duration="17969000" />
+      <workItem from="1612249897414" duration="6513000" />
+      <workItem from="1612281301620" duration="159000" />
+      <workItem from="1612352046851" duration="2651000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

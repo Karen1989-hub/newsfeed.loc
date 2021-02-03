@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminPagesController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\AdvertisingController;
+use App\Http\Controllers\AboutUsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,7 @@ Route::get('/', [FrontController::class,'getHomePage'])->name('home');
 Route::get('/karen', function () {return view('welcome');});
 Route::get('/singel/{id}', [FrontController::class,'getSingelPage'])->name('getSingelPage');
 Route::get('/allNews/{firstCategory}/{page?}',[FrontController::class,'getAllNews'])->name('getAllNews');
+Route::get('/aboutUs',[FrontController::class,'aboutUs'])->name('aboutUs');
 Route::fallback(function (){return view('errors.404');});
 
 //check admin user
@@ -42,7 +44,8 @@ Route::prefix("/admin")->group(function(){
     Route::get("/deleteNews/{id}",[NewsController::class,"deleteNews"])->name('deleteNews');
     Route::get("/getDeleteSponsorPage",[AdminPagesController::class,"getDeleteSponsorPage"])->name('getDeleteSponsorPage');
     Route::get("/deleteSponsor/{id}",[AdvertisingController::class,"deleteSponsor"])->name('deleteSponsor');
-
+    Route::get("/getAboutUsPage",[AdminPagesController::class,"getAboutUsPage"])->name('getAboutUsPage');
+    Route::post("/updateAboutUsText",[AboutUsController::class,"updateAboutUsText"])->name('updateAboutUsText');
 
 });
 

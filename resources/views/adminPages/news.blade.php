@@ -17,23 +17,15 @@
             </ul>
         </li>
         <li class="slide">
-            <a class="side-menu__item" data-toggle="slide" href="index-2.html#"><i class="side-menu__icon fa fa-dollar"
-                                                                                   data-toggle="tooltip"
-                                                                                   title="fa fa-dollar"></i><span
-                    class="side-menu__label">---</span><i class="angle fa fa-angle-right"></i></a>
+            <a class="side-menu__item" data-toggle="slide" href="index-2.html#"><i class="side-menu__icon fa fa-dollar" data-toggle="tooltip" title="fa fa-dollar"></i><span class="side-menu__label">Մեր մասին</span><i class="angle fa fa-angle-right"></i></a>
             <ul class="slide-menu">
-                <li><a class="slide-item" href="index.html">...</a></li>
-                <li><a class="slide-item" href="index2.html">...</a></li>
+                <li><a class="slide-item" href="{{route('getAboutUsPage')}}">Մեր մասին</a></li>
             </ul>
         </li>
         <li class="slide">
-            <a class="side-menu__item" data-toggle="slide" href="index-2.html#"><i class="side-menu__icon ti-bag"
-                                                                                   data-toggle="tooltip"
-                                                                                   title="ti-bag"></i><span
-                    class="side-menu__label">---</span><i class="angle fa fa-angle-right"></i></a>
+            <a class="side-menu__item" data-toggle="slide" href="index-2.html#"><i class="side-menu__icon fa fa-dollar" data-toggle="tooltip" title="fa fa-dollar"></i><span class="side-menu__label">Մեր մասին</span><i class="angle fa fa-angle-right"></i></a>
             <ul class="slide-menu">
-                <li><a class="slide-item" href="index.html">...</a></li>
-                <li><a class="slide-item" href="index2.html">...</a></li>
+                <li><a class="slide-item" href="{{route('getAboutUsPage')}}">Մեր մասին</a></li>
             </ul>
         </li>
     </ul>
@@ -119,20 +111,20 @@
                                             </div>
                                         </div>
 
-                                        <div class="form-group">
-                                            <label class="form-label">Երկրորդական կատեգորիա</label>
-                                            <select value="{{old("category2")}}" name="category2" id="select-countries"
-                                                    class="form-control select2 custom-select">
-                                                <option value="null">null</option>
-                                                <option value="footbol">Ֆուտբոլ</option>
-                                                <option value="basketbol">Բասկետբոլ</option>
-                                                <option value="tenis">Թենիս</option>
-                                                <option value="boxing">Բոքս</option>
-                                                <option value="chess">Շախմատ</option>
-                                                <option value="wrestling">Ռեսլինգ</option>
-                                                <option value="other_sports">այլ սպոռտաձև</option>
-                                            </select>
-                                        </div>
+{{--                                        <div class="form-group">--}}
+{{--                                            <label class="form-label">Երկրորդական կատեգորիա</label>--}}
+{{--                                            <select value="{{old("category2")}}" name="category2" id="select-countries"--}}
+{{--                                                    class="form-control select2 custom-select">--}}
+{{--                                                <option value="null">null</option>--}}
+{{--                                                <option value="footbol">Ֆուտբոլ</option>--}}
+{{--                                                <option value="basketbol">Բասկետբոլ</option>--}}
+{{--                                                <option value="tenis">Թենիս</option>--}}
+{{--                                                <option value="boxing">Բոքս</option>--}}
+{{--                                                <option value="chess">Շախմատ</option>--}}
+{{--                                                <option value="wrestling">Ռեսլինգ</option>--}}
+{{--                                                <option value="other_sports">այլ սպոռտաձև</option>--}}
+{{--                                            </select>--}}
+{{--                                        </div>--}}
                                     </div>
                                     <button type="submit" class="btn btn-primary btn-block">Հաստատել</button>
                                 </form>

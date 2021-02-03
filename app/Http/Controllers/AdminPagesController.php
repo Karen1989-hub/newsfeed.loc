@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Admin_pages_header_content;
 use App\Models\Advertising;
+use App\Models\AboutUs;
 
 class AdminPagesController extends Controller
 {
@@ -39,7 +40,12 @@ class AdminPagesController extends Controller
         $arr = ['text1'=>$row->text1,'text2'=>$row->text2,'sponsors'=>$sponsors];
         return view('adminPages.deleteSponsor',$arr);
     }
+    public function getAboutUsPage(){
+        $row = Admin_pages_header_content::find(7);
 
 
+        $arr = ['text1'=>$row->text1,'text2'=>$row->text2,'aboutUsText'];
+        return view('adminPages.aboutUs',$arr);
+    }
 
 }

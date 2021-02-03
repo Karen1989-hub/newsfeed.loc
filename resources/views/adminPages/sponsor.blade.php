@@ -15,10 +15,9 @@
             </ul>
         </li>
         <li class="slide">
-            <a class="side-menu__item" data-toggle="slide" href="index-2.html#"><i class="side-menu__icon fa fa-dollar" data-toggle="tooltip" title="fa fa-dollar"></i><span class="side-menu__label">---</span><i class="angle fa fa-angle-right"></i></a>
+            <a class="side-menu__item" data-toggle="slide" href="index-2.html#"><i class="side-menu__icon fa fa-dollar" data-toggle="tooltip" title="fa fa-dollar"></i><span class="side-menu__label">Մեր մասին</span><i class="angle fa fa-angle-right"></i></a>
             <ul class="slide-menu">
-                <li><a class="slide-item" href="index.html">...</a></li>
-                <li><a class="slide-item" href="index2.html">...</a></li>
+                <li><a class="slide-item" href="{{route('getAboutUsPage')}}">Մեր մասին</a></li>
             </ul>
         </li>
         <li class="slide">
