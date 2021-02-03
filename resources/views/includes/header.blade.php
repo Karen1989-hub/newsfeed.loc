@@ -63,7 +63,7 @@
                             <ul class="nav navbar-nav">
                                 <li><a href="{{route('home')}}">Գլխավոր</a></li>
                                 <li><a href="{{route('aboutUs')}}">Մեր Մասին</a></li>
-                                <li><a href="pages/contact.html">Հետադարձ Կապ</a></li>
+                                <li><a href="{{route('contactUs')}}">Հետադարձ Կապ</a></li>
                             </ul>
 
 
@@ -111,17 +111,6 @@
                 <ul class="nav navbar-nav main_nav">
                     <li class="active"><a href="{{route('home')}}"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Home</span></a></li>
                     <li><a href="/allNews/news/">News</a></li>
-{{--                    <li class="dropdown"> <a href="/allNews/sport/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sport</a>--}}
-{{--                        <ul class="dropdown-menu" role="menu">--}}
-{{--                            <li><a href="/allNews/sport/">Football</a></li>--}}
-{{--                            <li><a href="/allNews/sport/">Basketball</a></li>--}}
-{{--                            <li><a href="/allNews/sport/">Tennis</a></li>--}}
-{{--                            <li><a href="/allNews/sport/">Boxing</a></li>--}}
-{{--                            <li><a href="/allNews/sport/">Chess</a></li>--}}
-{{--                            <li><a href="/allNews/sport/">Wrestling</a></li>--}}
-{{--                            <li><a href="/allNews/sport/">Other Sports</a></li>--}}
-{{--                        </ul>--}}
-{{--                    </li>--}}
                     <li><a href="/allNews/sport/">Sport</a></li>
                     <li><a href="/allNews/life/">Life & Style</a></li>
                     <li><a href="/allNews/medicine/">Medicine</a></li>

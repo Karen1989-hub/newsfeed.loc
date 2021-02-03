@@ -43,8 +43,11 @@ class AdminPagesController extends Controller
     public function getAboutUsPage(){
         $row = Admin_pages_header_content::find(7);
 
+        //aboutUsTexts
+        $pageTexts = AboutUs::where('id',1)->get();
 
-        $arr = ['text1'=>$row->text1,'text2'=>$row->text2,'aboutUsText'];
+        $arr = ['text1'=>$row->text1,'text2'=>$row->text2,
+            'aboutUsText'=>$pageTexts[0]->aboutUsText,'questions'=>$pageTexts[0]->questions];
         return view('adminPages.aboutUs',$arr);
     }
 

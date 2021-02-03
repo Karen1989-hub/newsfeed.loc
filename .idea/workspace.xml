@@ -2,21 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4ffe40c-9396-4086-8d09-995d2cd23799" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/aboutUsPage.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/adminPages/aboutUs.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/includes/newsfeedEndSponsor.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/contactUs.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AboutUsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AboutUsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminPagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminPagesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_29_142601_create_categories_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/admin_home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/admin_home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/deleteNews.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/deleteNews.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/deleteSponsor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/deleteSponsor.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/news.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/slider.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/sponsor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/sponsor.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/allNewsPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/allNewsPage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/AboutUs.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/AboutUs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/aboutUs.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/aboutUs.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -151,7 +144,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/proektNews/newsfeed/pages/contact.html" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -226,7 +219,8 @@
       <workItem from="1612170935091" duration="17969000" />
       <workItem from="1612249897414" duration="6513000" />
       <workItem from="1612281301620" duration="159000" />
-      <workItem from="1612352046851" duration="2651000" />
+      <workItem from="1612352046851" duration="5621000" />
+      <workItem from="1612372352336" duration="9164000" />
     </task>
     <servers />
   </component>

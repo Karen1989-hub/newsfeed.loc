@@ -7,6 +7,7 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\AdvertisingController;
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,11 +20,13 @@ use App\Http\Controllers\AboutUsController;
 |
 */
 
+//front pages
 Route::get('/', [FrontController::class,'getHomePage'])->name('home');
 Route::get('/karen', function () {return view('welcome');});
 Route::get('/singel/{id}', [FrontController::class,'getSingelPage'])->name('getSingelPage');
 Route::get('/allNews/{firstCategory}/{page?}',[FrontController::class,'getAllNews'])->name('getAllNews');
 Route::get('/aboutUs',[FrontController::class,'aboutUs'])->name('aboutUs');
+Route::get('/contactUs',[FrontController::class,"contactUs"])->name('contactUs');
 Route::fallback(function (){return view('errors.404');});
 
 //check admin user
@@ -31,7 +34,7 @@ Route::get('/admin',function (){return view('adminPages.adminLogin');});
 Route::post('/admin/checkAdmin',[AdminLoginController::class,'checkAdmin'])->name('checkAdmin');
 Route::get('/signOut',[AdminLoginController::class,'signOut'])->name('signOut');
 
-//admin -> home page
+//admin
 Route::prefix("/admin")->group(function(){
     Route::get('/getRunningLine',[AdminPagesController::class,'getRunningLine'])->name('getRunningLine');
     Route::get('/getSlider',[AdminPagesController::class,'getSlider'])->name('getSlider');
@@ -46,6 +49,8 @@ Route::prefix("/admin")->group(function(){
     Route::get("/deleteSponsor/{id}",[AdvertisingController::class,"deleteSponsor"])->name('deleteSponsor');
     Route::get("/getAboutUsPage",[AdminPagesController::class,"getAboutUsPage"])->name('getAboutUsPage');
     Route::post("/updateAboutUsText",[AboutUsController::class,"updateAboutUsText"])->name('updateAboutUsText');
+    Route::post('/updateQuestions',[AboutUsController::class,'updateQuestions'])->name('updateQuestions');
+    Route::post("/setMessage",[ContactController::class,'setMessage'])->name('setMessage');
 
 });
 

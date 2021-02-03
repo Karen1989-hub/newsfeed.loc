@@ -75,11 +75,11 @@
                     <div class="card-body p-6">
                         <div class="wizard-container">
                             <div class="wizard-card m-0" data-color="red" id="wizardProfile">
-                                <form class="card" action="{{route('setSponsor')}}" method="post" enctype='multipart/form-data'>
+                                <form class="card" action="{{route('updateQuestions')}}" method="post" >
                                     @csrf
                                     <div class="card-body">
                                         <div class="form-group">
-                                            <textarea class="form-control" value="" name="lastText"
+                                            <textarea class="form-control" value="" name="questions"
                                                       rows="10" placeholder="Տեքստ..."
                                                       style="padding: 0 10px;height: 200px;"></textarea>
                                         </div>

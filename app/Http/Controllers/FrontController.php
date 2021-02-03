@@ -93,4 +93,15 @@ class FrontController extends Controller
 
         return view('aboutUsPage',$arr);
     }
+
+    public function contactUs(){
+        //newsfeed
+        $newsfeed = News::limit(5)->get();
+
+        //sponsor
+        $advertising = Advertising::all();
+
+        $arr = ['newsfeed'=>$newsfeed,'advertising'=>$advertising];
+        return view('contactUs',$arr);
+    }
 }
