@@ -52,6 +52,10 @@ Route::prefix("/admin")->group(function(){
     Route::post('/updateQuestions',[AboutUsController::class,'updateQuestions'])->name('updateQuestions');
     Route::post("/setMessage",[ContactController::class,'setMessage'])->name('setMessage');
 
+    //messages
+    Route::get("/messagesList/{type?}",[ContactController::class,'messagesList'])->name('messagesList');
+    Route::get("/singelMessage/{id}",[ContactController::class,'singelMessage'])->name('singelMessage');
+    Route::get("/deleteMessage/{id}",[ContactController::class,'deleteMessage'])->name('deleteMessage');
 });
 
 

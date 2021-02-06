@@ -4,18 +4,23 @@
 
     <ul class="side-menu">
         <li class="slide">
-            <a class="side-menu__item" data-toggle="slide" href="index-2.html#"><i class="side-menu__icon fa fa-desktop"></i><span class="side-menu__label">Գլխավոր էջ</span><i class="angle fa fa-angle-right"></i></a>
+            <a class="side-menu__item" data-toggle="slide" href="index-2.html#"><i
+                    class="side-menu__icon fa fa-desktop"></i><span class="side-menu__label">Գլխավոր էջ</span><i
+                    class="angle fa fa-angle-right"></i></a>
             <ul class="slide-menu">
                 <li><a class="slide-item" href="{{route('getRunningLine')}}">Վազող տող</a></li>
                 <li><a class="slide-item" href="{{route('getSlider')}}">Սլայդեր</a></li>
                 <li><a class="slide-item" href="{{route('getNews')}}">Նորություններ (News)</a></li>
-                <li><a class="slide-item active" href="{{route('getSponsor')}}">Հովանավոր (Sponsor)</a></li>
+                <li><a class="slide-item" href="{{route('getSponsor')}}">Հովանավոր (Sponsor)</a></li>
                 <li><a class="slide-item" href="{{route('getDeleteNewsPage')}}">Ջնջել հայտարարությունը</a></li>
                 <li><a class="slide-item" href="{{route('getDeleteSponsorPage')}}">Ջնջել հովանավորին</a></li>
             </ul>
         </li>
         <li class="slide">
-            <a class="side-menu__item" data-toggle="slide" href="index-2.html#"><i class="side-menu__icon fa fa-dollar" data-toggle="tooltip" title="fa fa-dollar"></i><span class="side-menu__label">Մեր մասին</span><i class="angle fa fa-angle-right"></i></a>
+            <a class="side-menu__item" data-toggle="slide" href="index-2.html#"><i class="side-menu__icon fa fa-dollar"
+                                                                                   data-toggle="tooltip"
+                                                                                   title="fa fa-dollar"></i><span
+                    class="side-menu__label">Մեր մասին</span><i class="angle fa fa-angle-right"></i></a>
             <ul class="slide-menu">
                 <li><a class="slide-item" href="{{route('getAboutUsPage')}}">Մեր մասին</a></li>
             </ul>
@@ -36,34 +41,21 @@
 <!-- Main Content-->
 <div class="app-content  my-3 my-md-5">
     <div class="side-app">
-        @include('includes.admin.admin_pages_header')
+
+        <div class="page-header">
+            <h4 class="page-title">Նամակներ</h4>
+
+        </div>
         <div class="row">
-            <div class="col-md-12">
+
+            <div class="col-md-12 col-lg-12 col-xl-12">
                 <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">Ավելացնել հովանավոր</div>
-                    </div>
-                    <div class="card-body p-6">
-                        <div class="wizard-container">
-                            <div class="wizard-card m-0" data-color="red" id="wizardProfile">
-                                <form class="card" action="{{route('setSponsor')}}" method="post" enctype='multipart/form-data'>
-                                    @csrf
-                                    <div class="card-body">
-                                        <div class="form-group">
-                                            <div class="custom-file">
-                                                <input type="file" class="custom-file-input" value="{{old("dounloadFile")}}" name="dounloadFile">
-                                                <label class="custom-file-label">ընտրեք ֆայլը</label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="form-label">Գովազդի հղումը</label>
-                                            <input type="text" class="form-control" value="{{ old('title') }}" name="link" placeholder="լինկ"  style="padding-left: 10px">
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary btn-block">Հաստատել</button>
-                                </form>
-                            </div>
-                        </div> <!-- wizard container -->
+                    <div class="card-body">
+                        <h3 class="font-weight-semibold">{{$message[0]->name}}</h3>
+                        <h4 class="font-weight-semibold">{{$message[0]->email}}</h4>
+                        <p>{{$message[0]->message}}</p>
+                        <h6 class="font-weight-semibold">{{$message[0]->created_at}}</h6>
+                        <p><a href="{{route('messagesList')}}" class="btn btn-outline-warning">Վերադառնալ ցանկ</a></p>
                     </div>
                 </div>
             </div>
@@ -76,12 +68,12 @@
     <div class="container">
         <div class="row align-items-center flex-row-reverse">
             <div class="col-md-12 col-sm-12 mt-3 mt-lg-0 text-center">
-                Copyright © 2021 <a href="#">Karen Aroyan</a> All rights reserved.
+                Copyright © 2018 <a href="#">adminor</a>. Designed by <a href="#">Spruko</a> All rights reserved.
             </div>
         </div>
     </div>
 </footer>
-<!-- End Footer-->		</div>
+<!-- End Footer-->        </div>
 <!-- End Page -->
 <!-- Back to top -->
 <a href="#top" id="back-to-top" style="display: inline;"><i class="fa fa-angle-up"></i></a>
@@ -98,14 +90,6 @@
 <!-- Fullside-menu Js-->
 <script src="../../../public/assets/plugins/toggle-sidebar/sidemenu.js"></script>
 
-<!-- forn-wizard js-->
-<script src="../../../public/assets/plugins/forn-wizard/js/material-bootstrap-wizard.js"></script>
-<script src="../../../public/assets/plugins/forn-wizard/js/jquery.validate.min.js"></script>
-<script src="../../../public/assets/plugins/forn-wizard/js/jquery.bootstrap.js"></script>
-<!-- Inline js -->
-<script src="../../../public/assets/js/select2.js"></script>
-<!--Select2 js -->
-<script src="../../../public/assets/plugins/select2/select2.full.min.js"></script>
 
 <!-- Custom scroll bar Js-->
 <script src="../../../public/assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
@@ -117,5 +101,5 @@
 <script src="../../../public/assets/js/custom-dark.js"></script>
 </body>
 
-<!-- Mirrored from laravel.spruko.com/adminor/Leftmenu-Icon-DarkSidebar-Dark/form-wizard by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 May 2020 09:11:13 GMT -->
+<!-- Mirrored from laravel.spruko.com/adminor/Leftmenu-Icon-DarkSidebar-Dark/emailservices by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 May 2020 09:10:44 GMT -->
 </html>

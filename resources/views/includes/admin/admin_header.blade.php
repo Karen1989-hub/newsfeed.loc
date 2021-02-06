@@ -33,8 +33,8 @@
     <!-- select2 Plugin -->
     <link href="../../../public/assets/plugins/select2/select2.min-dark.css" rel="stylesheet" />
     <!-- forn-wizard css-->
-    <link href="../../../public/assets/plugins/forn-wizard/css/material-bootstrap-wizard-dark.css" rel="stylesheet" />
-    <link href="../../../public/assets/plugins/forn-wizard/css/demo.css" rel="stylesheet" />
+{{--    <link href="../../../public/assets/plugins/forn-wizard/css/material-bootstrap-wizard-dark.css" rel="stylesheet" />--}}
+{{--    <link href="../../../public/assets/plugins/forn-wizard/css/demo.css" rel="stylesheet" />--}}
 
     <!-- Custom scroll bar css-->
     <link href="../../../public/assets/plugins/scroll-bar/jquery.mCustomScrollbar.css" rel="stylesheet" />
@@ -42,14 +42,12 @@
     <!---Font icons-->
     <link href="../../../public/assets/css/icons.css" rel="stylesheet" />
 
-
     <!---Switcher css-->
     <link href="../../../public/assets/switcher/css/switcher.css" rel="stylesheet" />
     <link href="../../../public/assets/switcher/demo.css" rel="stylesheet" />	</head>
+
+
 <body class="app sidebar-mini">
-
-
-
 
 <div id="global-loader" ></div>
 <div class="page" >

@@ -15,19 +15,13 @@
     <link rel="stylesheet" type="text/css" href="../../public/assets/css/theme.css">
     <link rel="stylesheet" type="text/css" href="../../public/assets/css/style.css">
 
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('}assets/css/font-awesome.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/animate.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/font.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/li-scroller.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/slick.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/jquery.fancybox.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/theme.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
+
     <!--[if lt IE 9]>
     <script src="../../public/assets/js/html5shiv.min.js"></script>
     <script src="../../public/assets/js/respond.min.js"></script>
     <![endif]-->
+
+
 </head>
 <body>
 <div id="preloader">
