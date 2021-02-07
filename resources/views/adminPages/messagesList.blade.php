@@ -68,10 +68,6 @@
                                 </div>
                                 <ul class="unstyled inbox-pagination">
                                     <li><span>1-50 of {{$messagesCount}}</span></li>
-                                    <li>
-                                        <a class="np-btn" href="#"><i
-                                                class="fa fa-angle-right pagination-right"></i></a>
-                                    </li>
                                 </ul>
                             </div>
                             <div class="table-responsive">
@@ -104,7 +100,7 @@
                     </div>
                 </div>
                 <div>
-                    <ul class="pagination float-right mb-3">
+                    <ul class="pagination float-left mb-3">
                         <li class="page-item page-prev disabled">
                             <a class="page-link" href="#" tabindex="-1">Prev</a>
                         </li>

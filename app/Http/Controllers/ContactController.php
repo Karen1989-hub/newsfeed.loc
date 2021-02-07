@@ -20,20 +20,21 @@ class ContactController extends Controller
     public function messagesList($type=null){
         if($type == "all"){
             $dropDown = "all";
-            $allMessages = Message::all();
+            $allMessages = Message::orderBy('id','desc')->get();
         } else if($type == "readed"){
             $dropDown = "readed";
-            $allMessages = Message::where('readed','yes')->get();
+            $allMessages = Message::where('readed','yes')->orderBy('id','desc')->get();
         } else if($type == "unread"){
             $dropDown = "unread";
-            $allMessages = Message::where('readed','no')->get();
+            $allMessages = Message::where('readed','no')->orderBy('id','desc')->get();
         } else {
             $dropDown = "all";
-            $allMessages = Message::all();
+            $allMessages = Message::orderBy('id','desc')->get();
         }
-
         $messagesCount = Message::count();
-        $unreadMessageCount = Message::where("read","no")->count();
+        $unreadMessageCount = Message::where("readed","no")->count();
+
+
         $arr = ['allMessages'=>$allMessages,'messagesCount'=>$messagesCount,'dropDown'=>$dropDown,
             'unreadMessageCount'=>$unreadMessageCount];
         return view('adminPages.messagesList',$arr);
@@ -44,7 +45,8 @@ class ContactController extends Controller
         $update = Message::find($id);
         $update->readed = "yes";
         $update->save();
-        $arr = ['message'=>$message];
+        $messagesCount = Message::count();
+        $arr = ['message'=>$message,'messagesCount'=>$messagesCount];
         return view('adminPages.singelMessage',$arr);
     }
 

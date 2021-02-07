@@ -61,7 +61,7 @@
                             </ul>
 
 
-                            <form class="navbar-form navbar-right" action="/action_page.php">
+                            <form class="navbar-form navbar-right" action="{{route('search')}}">
                             <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Search" name="search">
                                     <div class="input-group-btn">

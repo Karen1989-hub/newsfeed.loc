@@ -115,20 +115,6 @@
                                             </div>
                                         </div>
 
-{{--                                        <div class="form-group">--}}
-{{--                                            <label class="form-label">Երկրորդական կատեգորիա</label>--}}
-{{--                                            <select value="{{old("category2")}}" name="category2" id="select-countries"--}}
-{{--                                                    class="form-control select2 custom-select">--}}
-{{--                                                <option value="null">null</option>--}}
-{{--                                                <option value="footbol">Ֆուտբոլ</option>--}}
-{{--                                                <option value="basketbol">Բասկետբոլ</option>--}}
-{{--                                                <option value="tenis">Թենիս</option>--}}
-{{--                                                <option value="boxing">Բոքս</option>--}}
-{{--                                                <option value="chess">Շախմատ</option>--}}
-{{--                                                <option value="wrestling">Ռեսլինգ</option>--}}
-{{--                                                <option value="other_sports">այլ սպոռտաձև</option>--}}
-{{--                                            </select>--}}
-{{--                                        </div>--}}
                                     </div>
                                     <button type="submit" class="btn btn-primary btn-block">Հաստատել</button>
                                 </form>

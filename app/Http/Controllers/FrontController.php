@@ -104,4 +104,18 @@ class FrontController extends Controller
         $arr = ['newsfeed'=>$newsfeed,'advertising'=>$advertising];
         return view('contactUs',$arr);
     }
+
+    public function search(Request $request){
+        //newsfeed
+        $newsfeed = News::limit(5)->get();
+
+        //sponsor
+        $advertising = Advertising::all();
+
+        $search = $request->input('search');
+        $singelNews = News::where('title',$search)->get();
+        $arr = ['singelNews'=>$singelNews,'newsfeed'=>$newsfeed,'advertising'=>$advertising];
+
+        return view('singelPage',$arr);
+    }
 }

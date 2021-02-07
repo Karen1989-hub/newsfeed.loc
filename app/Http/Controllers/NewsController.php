@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Message;
 use Illuminate\Http\Request;
 use App\Models\News;
 use Illuminate\Support\Facades\Validator;
@@ -63,7 +64,8 @@ class NewsController extends Controller
         } else {
             $news = News::where('firstCategory','=',$category)->get();
         }
-        $arr = ['news'=>$news,'text1'=>$text1,'text2'=>$text2];
+        $messagesCount = Message::count();
+        $arr = ['news'=>$news,'text1'=>$text1,'text2'=>$text2,'messagesCount'=>$messagesCount];
         return view('adminPages.deleteNews',$arr);
     }
 

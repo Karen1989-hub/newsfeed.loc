@@ -5,6 +5,7 @@
     <div class="row">
         <div class="col-lg-8 col-md-8 col-sm-8">
             <div class="left_content">
+                @if(count($singelNews) != 0)
                 <div class="single_page">
                     <ol class="breadcrumb">
                         <li><a href="../index.html">Home</a></li>
@@ -21,11 +22,11 @@
                     <div class="single_page_content"><img class="img-center"
                                                           src="../public/items/{{$singelNews[0]->imgName}}" alt="">
                         <p>{{$singelNews[0]->text2}}</p>
-
                     </div>
-
-
                 </div>
+                @else
+                    <h2>Ձեր հարցմամբ ոչինչ չի գտնվել:</h2>
+                    @endif
             </div>
         </div>
 
@@ -43,6 +44,7 @@
                                                                class="catg_title">{{$val->title}}</a></div>
                                 </div>
                             </li>
+
                         @endforeach
                     </ul>
                 </div>
@@ -93,8 +95,8 @@
                 </div>
                 <div class="single_sidebar wow fadeInDown">
                     <h2><span>Sponsor</span></h2>
-                    @if(isset($sponsors))
-                        @foreach($sponsors as $val)
+                    @if(isset($advertising))
+                        @foreach($advertising as $val)
                             <a class="sideAdd" href="#"><img src="../../public/sponsorsImg/{{$val->sponsorImg}}" alt=""></a>
                         @endforeach
                     @endif

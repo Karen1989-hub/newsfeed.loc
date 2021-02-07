@@ -59,45 +59,22 @@
                     <a aria-label="Hide Sidebar" class="app-sidebar__toggle" data-toggle="sidebar" href="#"></a>
                     <div class="d-flex order-lg-2 ml-auto header-right-icons header-search-icon">
 
-
                         <div class="dropdown d-none d-md-flex" >
                             <a  class="nav-link icon full-screen-link nav-link-bg">
                                 <i class="fa fa-expand"  id="fullscreen-button"></i>
                             </a>
                         </div>
 
-
                         <div class="dropdown d-none d-md-flex">
                             <a class="nav-link icon text-center" data-toggle="dropdown">
                                 <i class="icon icon-speech"></i>
-                                <span class=" nav-unread badge badge-info badge-pill">2</span>
+                                <span class=" nav-unread badge badge-info badge-pill">{{$messagesCount}}</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                <a href="#" class="dropdown-item text-center">2 New Messages</a>
+                                <a href="#" class="dropdown-item text-center">{{$messagesCount}} New Messages</a>
                                 <div class="dropdown-divider"></div>
-                                <a href="#" class="dropdown-item d-flex pb-3">
-                                    <span class="avatar brround mr-3 align-self-center cover-image" data-image-src="assets/images/faces/male/41.jpg"></span>
-                                    <div>
-                                        <strong>Madeleine</strong> Hey! there I' am available....
-                                        <div class="small text-muted">3 hours ago</div>
-                                    </div>
-                                </a>
-                                <a href="#" class="dropdown-item d-flex pb-3">
-                                    <span class="avatar brround mr-3 align-self-center cover-image" data-image-src="assets/images/faces/female/1.jpg"></span>
-                                    <div>
-                                        <strong>Anthony</strong> New product Launching...
-                                        <div class="small text-muted">5  hour ago</div>
-                                    </div>
-                                </a>
-                                <a href="#" class="dropdown-item d-flex pb-3">
-                                    <span class="avatar brround mr-3 align-self-center cover-image" data-image-src= "assets/images/faces/female/18.jpg"></span>
-                                    <div>
-                                        <strong>Olivia</strong> New Schedule Realease......
-                                        <div class="small text-muted">45 mintues ago</div>
-                                    </div>
-                                </a>
                                 <div class="dropdown-divider"></div>
-                                <a href="#" class="dropdown-item text-center">See all Messages</a>
+                                <a href="{{route('messagesList')}}" class="dropdown-item text-center">See all Messages</a>
                             </div>
                         </div>
 

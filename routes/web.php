@@ -27,6 +27,7 @@ Route::get('/singel/{id}', [FrontController::class,'getSingelPage'])->name('getS
 Route::get('/allNews/{firstCategory}/{page?}',[FrontController::class,'getAllNews'])->name('getAllNews');
 Route::get('/aboutUs',[FrontController::class,'aboutUs'])->name('aboutUs');
 Route::get('/contactUs',[FrontController::class,"contactUs"])->name('contactUs');
+Route::get("/search",[FrontController::class,"search"])->name('search');
 Route::fallback(function (){return view('errors.404');});
 
 //check admin user
