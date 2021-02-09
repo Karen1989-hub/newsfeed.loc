@@ -104,11 +104,11 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav main_nav">
                     <li class="active"><a href="{{route('home')}}"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Home</span></a></li>
-                    <li><a href="/allNews/news/">News</a></li>
-                    <li><a href="/allNews/sport/">Sport</a></li>
-                    <li><a href="/allNews/life/">Life & Style</a></li>
-                    <li><a href="/allNews/medicine/">Medicine</a></li>
-                    <li><a href="/allNews/technology/">Technology</a></li>
+                    <li><a href="/allNews/news/">Նուրություններ</a></li>
+                    <li><a href="/allNews/sport/">Սպորտ</a></li>
+                    <li><a href="/allNews/life/">Կյանք և ոճ</a></li>
+                    <li><a href="/allNews/medicine/">Բժշկություն</a></li>
+                    <li><a href="/allNews/technology/">Տեխնոլոգիաներ</a></li>
 
                 </ul>
             </div>

@@ -5,13 +5,13 @@
                 <div class="footer_widget wow fadeInDown">
                     <h2>SaturnNews</h2>
                     <ul class="tag_nav">
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">Sports</a></li>
-                        <li><a href="#">Life &amp; Style</a></li>
-                        <li><a href="#">Medicine</a></li>
-                        <li><a href="#">Technology</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="/allNews/news/">Նուրություններ</a></li>
+                        <li><a href="/allNews/sport/">Սպորտ</a></li>
+                        <li><a href="/allNews/life/">Կյանք և ոճ</a></li>
+                        <li><a href="/allNews/medicine/">Բժշկություն</a></li>
+                        <li><a href="/allNews/technology/">Տեխնոլոգիաներ</a></li>
+                        <li><a href="{{route('aboutUs')}}">Մեր Մասին</a></li>
+                        <li><a href="{{route('contactUs')}}">Հետադարձ կապ</a></li>
                     </ul>
                 </div>
             </div>

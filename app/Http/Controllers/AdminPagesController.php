@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Admin_pages_header_content;
 use App\Models\Advertising;
 use App\Models\AboutUs;
+use Illuminate\Support\Facades\Cookie;
 
 class AdminPagesController extends Controller
 {
@@ -23,6 +24,9 @@ class AdminPagesController extends Controller
         return view('adminPages.slider',$arr);
     }
     public function getNews(){
+       // Cookie::queue('test','test cookie',1);
+        dump(Cookie::get('test'));
+
         $row = Admin_pages_header_content::find(3);
         $messagesCount = Message::count();
         $arr = ['text1'=>$row->text1,'text2'=>$row->text2,'messagesCount'=>$messagesCount];

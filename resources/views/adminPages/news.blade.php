@@ -48,14 +48,8 @@
                     <div class="card-body p-6">
                         <div class="wizard-container">
                             <div class="wizard-card m-0" data-color="red" id="wizardProfile">
-                                @if ($errors->any())
-                                    <div class="alert alert-danger">
-                                        <ul>
-                                            @foreach ($errors->all() as $error)
-                                                <li>{{ $error }}</li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
+                                @if ($errors->has('title'))
+                                  {{$errors->first('title')}}
                                 @endif
                                 <form class="card" action="{{route('setNews')}}" method="post"
                                       enctype='multipart/form-data'>
@@ -65,11 +59,19 @@
                                             <label class="form-label">Նշել վերնագիրը</label>
                                             <input type="text" class="form-control" value="{{ old('title') }}"
                                                    name="title" placeholder="Վերնագիր" style="padding-left: 10px">
+                                           <strong style="color: red"> @if ($errors->has('title'))
+                                                {{$errors->first('title')}}
+                                            @endif</strong>
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-file">
                                                 <input type="file" class="custom-file-input"
                                                        value="{{old("dounloadFile")}}" name="dounloadFile">
+                                                <strong style="color: red">
+                                                    @if ($errors->has('dounloadFile'))
+                                                        {{$errors->first('dounloadFile')}}
+                                                    @endif
+                                                </strong>
                                                 <label class="custom-file-label">ընտրեք ֆայլը</label>
                                             </div>
                                         </div>

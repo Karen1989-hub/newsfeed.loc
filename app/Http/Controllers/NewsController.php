@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Message;
 use Illuminate\Http\Request;
 use App\Models\News;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use vendor\autoload;
@@ -22,20 +23,28 @@ class NewsController extends Controller
         $category2 = $request->input('category2');
         $radios = $request->input('radios');
 
-    $this->validate($request,[
+        $validator = Validator::make($request->all(),
+        [
         'title'=>'required|max:200',
         'dounloadFile'=>'required|max:200',
         'firstText'=>'required|max:200',
         'lastText'=>'required',
         'category'=>'required|max:100',
+        ],
+        [
+            'title.required'=>"դաշտը պեք է լրացված լինի",
+            'title.max'=>"դաշտը չի կարող գերազանցի 200 սինվոլը",
+            'dounloadFile'=>'նշեք ներբեռնվող ֆայլը',
+            'firstText'=>'դաշտը պեք է լրացված լինի և չգերազանցի 200 սինվոլը',
+            'lastText'=>'դաշտը պեք է լրացված լինի',
+            'category'=>'դաշտը պեք է լրացված լինի',
+        ]);
 
-    ]);
-
-
-        //echo $title,$dounloadFile,$firstText,$lastText,$category,$category2,$radios;
+        if($validator->fails()){
+            return back()->withErrors($validator)->withInput();
+        };
 
         $carbon = new Carbon();
-
         News::create(['title' => $title2, 'imgName' => "null",
             'text1' => $firstText, 'text2' => $lastText,
             'firstCategory' => $category,
