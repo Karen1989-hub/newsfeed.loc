@@ -24,8 +24,9 @@ class AdminPagesController extends Controller
         return view('adminPages.slider',$arr);
     }
     public function getNews(){
-       // Cookie::queue('test','test cookie',1);
-        dump(Cookie::get('test'));
+        //dump(Cookie::get('test'));
+        // Cookie::queue('test','test cookie',1);
+
 
         $row = Admin_pages_header_content::find(3);
         $messagesCount = Message::count();

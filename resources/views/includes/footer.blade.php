@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6">
                 <div class="footer_widget wow fadeInDown">
-                    <h2>SaturnNews</h2>
+                    <h2>Սատուրն Նյուզ</h2>
                     <ul class="tag_nav">
                         <li><a href="/allNews/news/">Նուրություններ</a></li>
                         <li><a href="/allNews/sport/">Սպորտ</a></li>
@@ -17,18 +17,18 @@
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6">
                 <div class="footer_widget wow fadeInRightBig">
-                    <h2>Contact</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <h2>Կոնտակտաին տվյալներ</h2>
+                    <p>Էլ. փոստ` info@newsfeed.am</p>
                     <address>
-                        Perfect News,1238 S . 123 St.Suite 25 Town City 3333,USA Phone: 123-326-789 Fax: 123-546-567
+
                     </address>
                 </div>
             </div>
         </div>
     </div>
     <div class="footer_bottom">
-        <p class="copyright">Copyright &copy; 2020 <a href="index.html">NewsFeed</a></p>
-        <p class="developer">Developed By Saturn-Code</p>
+        <p class="copyright">Copyright &copy; 2020 <a href="index.html"></a></p>
+        <p class="developer">Developed By Saturn-Code v.1.1.0</p>
     </div>
 </footer>
 </div>

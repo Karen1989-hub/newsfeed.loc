@@ -173,7 +173,7 @@
                     </ul>
                 </div>
                 <div class="single_sidebar wow fadeInDown">
-                    <h2><span>Sponsor</span></h2>
+                    <h2><span>Հովանավոր</span></h2>
                     @if(isset($sponsors))
                         @foreach($sponsors as $val)
                             <a class="sideAdd" href="{{$val->link}}"><img src="../../public/sponsorsImg/{{$val->sponsorImg}}" alt=""></a>

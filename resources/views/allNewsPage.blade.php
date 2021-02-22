@@ -1,5 +1,5 @@
 @include('includes.header')
-@include('includes.newsSection')
+{{--@include('includes.newsSection')--}}
 <section id="contentSection">
     <div class="row">
         <div class="col-lg-8 col-md-8 col-sm-8">
@@ -29,7 +29,7 @@
                             @if(count($news) != 0)
                             <li class="page-item"><a class="page-link"
                                                      href="/allNews/{{$news[0]->firstCategory}}/@if($page>1)
-                                                     {{$page-1}} @else 1 @endif">Previous</a></li>
+                                                     {{$page-1}} @else 1 @endif">Նախորդը</a></li>
                             @if(count($news) != 0)
                                 @for($i=1;$i<=$count;$i++)
                                     <li class="page-item
@@ -42,7 +42,7 @@
                             @endif
                             <li class="page-item"><a class="page-link"
                                                      href="/allNews/{{$news[0]->firstCategory}}/@if($page<$count)
-                                                     {{$page+1}} @else {{$count}} @endif">Next</a>
+                                                     {{$page+1}} @else {{$count}} @endif">Հաջորդը</a>
                             </li>
                             @endif
                         </ul>

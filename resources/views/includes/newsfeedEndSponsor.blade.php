@@ -11,22 +11,22 @@
                                         alt=""
                                         src="../../public/items/{{$val->imgName}}">
                                 </a>
-                                <div class="media-body"><a href="/singel/{{$val->id}}" class="catg_title">{{$val->title}}</a></div>
+                                <div class="media-body"><a href="/singel/{{$val->id}}"
+                                                           class="catg_title">{{$val->title}}</a></div>
                             </div>
                         </li>
                     @endforeach
                 @endif
             </ul>
         </div>
-        <div class="single_sidebar wow fadeInDown animated"
+        <div class="single_sidebar wow fadeInDown"
              style="visibility: visible; animation-name: fadeInDown;">
             <h2><span>Հովանավոր</span></h2>
             @if(count($advertising) != 0)
                 @foreach($advertising as $val)
                     <a class="sideAdd" href="#"><img src="../../public/sponsorsImg/{{$val->sponsorImg}}" alt=""></a>
+                @endforeach
+            @endif
         </div>
-        @endforeach
-        @endif
-
     </aside>
 </div>
