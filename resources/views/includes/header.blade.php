@@ -51,7 +51,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="{{route('home')}}">SaturnNews</a>
+                            <a class="navbar-brand" href="{{route('home')}}">Newsfeed</a>
                         </div>
                         <div class="collapse navbar-collapse" id="myNavbar">
                             <ul class="nav navbar-nav">
@@ -63,7 +63,7 @@
 
                             <form class="navbar-form navbar-right" action="{{route('search')}}">
                             <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search" name="search">
+                                    <input type="text" class="form-control" placeholder="որոնում..." name="search">
                                     <div class="input-group-btn">
                                         <button class="btn btn-default" type="submit">
                                             <i class="glyphicon glyphicon-search"></i>

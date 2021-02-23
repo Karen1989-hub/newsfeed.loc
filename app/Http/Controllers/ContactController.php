@@ -31,7 +31,7 @@ class ContactController extends Controller
             $dropDown = "all";
             $allMessages = Message::orderBy('id','desc')->get();
         }
-        $messagesCount = Message::count();
+        $messagesCount = Message::where('readed','no')->count();
         $unreadMessageCount = Message::where("readed","no")->count();
 
 
@@ -45,7 +45,7 @@ class ContactController extends Controller
         $update = Message::find($id);
         $update->readed = "yes";
         $update->save();
-        $messagesCount = Message::count();
+        $messagesCount = Message::where('readed','no')->count();
         $arr = ['message'=>$message,'messagesCount'=>$messagesCount];
         return view('adminPages.singelMessage',$arr);
     }

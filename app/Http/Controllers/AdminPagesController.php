@@ -19,7 +19,7 @@ class AdminPagesController extends Controller
     }
     public function getSlider(){
         $row = Admin_pages_header_content::find(2);
-        $messagesCount = Message::count();
+        $messagesCount = Message::where('readed','no')->count();
         $arr = ['text1'=>$row->text1,'text2'=>$row->text2,'messagesCount'=>$messagesCount];
         return view('adminPages.slider',$arr);
     }
@@ -29,32 +29,32 @@ class AdminPagesController extends Controller
 
 
         $row = Admin_pages_header_content::find(3);
-        $messagesCount = Message::count();
+        $messagesCount = Message::where('readed','no')->count();
         $arr = ['text1'=>$row->text1,'text2'=>$row->text2,'messagesCount'=>$messagesCount];
             return view('adminPages.news',$arr);
     }
     public function getSponsor(){
         $row = Admin_pages_header_content::find(4);
-        $messagesCount = Message::count();
+        $messagesCount = Message::where('readed','no')->count();
         $arr = ['text1'=>$row->text1,'text2'=>$row->text2,'messagesCount'=>$messagesCount];
         return view('adminPages.sponsor',$arr);
     }
     public function getDeleteNewsPage(){
         $row = Admin_pages_header_content::find(5);
-        $messagesCount = Message::count();
+        $messagesCount = Message::where('readed','no')->count();
         $arr = ['text1'=>$row->text1,'text2'=>$row->text2,'messagesCount'=>$messagesCount];
         return view('adminPages.deleteNews',$arr);
     }
     public function getDeleteSponsorPage(){
         $row = Admin_pages_header_content::find(6);
-        $messagesCount = Message::count();
+        $messagesCount = Message::where('readed','no')->count();
         $sponsors = Advertising::all();
         $arr = ['text1'=>$row->text1,'text2'=>$row->text2,'sponsors'=>$sponsors,'messagesCount'=>$messagesCount];
         return view('adminPages.deleteSponsor',$arr);
     }
     public function getAboutUsPage(){
         $row = Admin_pages_header_content::find(7);
-        $messagesCount = Message::count();
+        $messagesCount = Message::where('readed','no')->count();
 
         //aboutUsTexts
         $pageTexts = AboutUs::where('id',1)->get();

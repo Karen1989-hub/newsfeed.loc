@@ -4,14 +4,10 @@
     <list default="true" id="f4ffe40c-9396-4086-8d09-995d2cd23799" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminPagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminPagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/aboutUsPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/aboutUsPage.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/allNewsPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/allNewsPage.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/contactUs.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contactUs.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/admin/admin_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/admin/admin_header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/includes/contentSection.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/contentSection.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/newsfeedEndSponsor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/newsfeedEndSponsor.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/singelPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/singelPage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/header.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +140,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/arxivFrelans/Paypal" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -229,7 +225,7 @@
       <workItem from="1612788468094" duration="4666000" />
       <workItem from="1613328004028" duration="3384000" />
       <workItem from="1613393627155" duration="657000" />
-      <workItem from="1613980777374" duration="2866000" />
+      <workItem from="1613980777374" duration="7563000" />
     </task>
     <servers />
   </component>

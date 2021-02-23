@@ -3,7 +3,7 @@
         <div class="col-lg-8 col-md-8 col-sm-8">
             <div class="left_content">
                 <div class="single_post_content">
-                    <h2><span>News</span></h2>
+                    <h2><span>Նորություններ</span></h2>
                     <div class="single_post_content_left">
                         <ul class="business_catgnav  wow fadeInDown">
                             <li>
@@ -41,7 +41,7 @@
                 <div class="fashion_technology_area">
                     <div class="fashion">
                         <div class="single_post_content">
-                            <h2><span>Sport</span></h2>
+                            <h2><span>Սպորտ</span></h2>
                             <ul class="business_catgnav wow fadeInDown">
                                 <li>
                                     @if(count($sportsLast) != 0)
@@ -78,7 +78,7 @@
                     </div>
                     <div class="technology">
                         <div class="single_post_content">
-                            <h2><span>Technology</span></h2>
+                            <h2><span>Տեխնոլոգիաներ</span></h2>
                             <ul class="business_catgnav">
                                 @if(count($technologysLast) != 0)
                                     <li>
@@ -115,7 +115,7 @@
                     </div>
                 </div>
                 <div class="single_post_content">
-                    <h2><span>Medicine</span></h2>
+                    <h2><span>Բժշկություն</span></h2>
                     <div class="single_post_content_left">
                         <ul class="business_catgnav">
                             <li>
@@ -156,7 +156,7 @@
         <div class="col-lg-4 col-md-4 col-sm-4">
             <aside class="right_content">
                 <div class="single_sidebar">
-                    <h2><span>Life & style</span></h2>
+                    <h2><span>Կյանք և ոճ</span></h2>
                     <ul class="spost_nav">
                         @if(count($lifeStyle) != 0)
                             @foreach($lifeStyle as $val)

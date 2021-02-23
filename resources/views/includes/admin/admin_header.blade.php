@@ -68,7 +68,9 @@
                         <div class="dropdown d-none d-md-flex">
                             <a class="nav-link icon text-center" data-toggle="dropdown">
                                 <i class="icon icon-speech"></i>
+                                @if($messagesCount != 0)
                                 <span class=" nav-unread badge badge-info badge-pill">{{$messagesCount}}</span>
+                                @endif
                             </a>
                             <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                                 <a href="#" class="dropdown-item text-center">{{$messagesCount}} New Messages</a>
