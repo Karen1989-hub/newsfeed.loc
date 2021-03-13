@@ -8,6 +8,8 @@ use App\Http\Controllers\FrontController;
 use App\Http\Controllers\AdvertisingController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CategoryController;
+use App\Models\Catagory;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,6 +54,8 @@ Route::prefix("/admin")->group(function(){
     Route::post("/updateAboutUsText",[AboutUsController::class,"updateAboutUsText"])->name('updateAboutUsText');
     Route::post('/updateQuestions',[AboutUsController::class,'updateQuestions'])->name('updateQuestions');
     Route::post("/setMessage",[ContactController::class,'setMessage'])->name('setMessage');
+    Route::get('getCategorys',[AdminPagesController::class,"getCategorys"])->name('getCategorys');
+    Route::post('createCategory',[CategoryController::class,'createCategory'])->name('createCategory');
 
     //messages
     Route::get("/messagesList/{type?}",[ContactController::class,'messagesList'])->name('messagesList');
@@ -59,6 +63,15 @@ Route::prefix("/admin")->group(function(){
     Route::get("/deleteMessage/{id}",[ContactController::class,'deleteMessage'])->name('deleteMessage');
 });
 
+Route::get('/test',function (){
+    $oderNews = Catagory::all();
+    foreach ($oderNews as $val){
+        dump($val->lastNews);
+//        foreach ($val->lastNews as $news){
+//            dump($news->title);
+//        }
+    }
+});
 
 
 

@@ -30,6 +30,16 @@
 
             </ul>
         </li>
+        <li class="slide">
+            <a class="side-menu__item" data-toggle="slide" href="index-2.html#"><i class="side-menu__icon ti-bag"
+                                                                                   data-toggle="tooltip"
+                                                                                   title="ti-bag"></i><span
+                    class="side-menu__label">Կատեգորիաներ</span><i class="angle fa fa-angle-right"></i></a>
+            <ul class="slide-menu">
+                <li><a class="slide-item" href="{{route('getCategorys')}}">Ավելացնել կատեգորիա</a></li>
+
+            </ul>
+        </li>
 
 
 

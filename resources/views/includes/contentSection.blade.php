@@ -141,7 +141,7 @@
                                     <li>
                                         <div class="media wow fadeInDown"><a href="singel/{{$val->id}}"
                                                                              class="media-left">
-                                                <img alt="" src="../../public/item/{{$val->imgName}}"> </a>
+                                                <img alt="" src="../../public/items/{{$val->imgName}}"> </a>
                                             <div class="media-body"><a href="singel/{{$val->id}}"
                                                                        class="catg_title"> {{$val->title}}</a></div>
                                         </div>
@@ -151,6 +151,51 @@
                         </ul>
                     </div>
                 </div>
+                {{--oder news start--}}
+                @if(count($oderNews)>0)
+                    @foreach($oderNews as $category)
+                <div class="single_post_content">
+                    <h2><span>{{$category->name}}</span></h2>
+                    @if(count($category->lastNews)>0)
+                    <div class="single_post_content_left">
+                        <ul class="business_catgnav">
+
+                            <li>
+                                    <figure class="bsbig_fig  wow fadeInDown"><a class="featured_img"
+                                                                                 href="singel/{{$category->lastNews[0]->id}}">
+                                            <img
+                                                src="../../public/items/{{$category->lastNews[0]->imgName}}" alt=""> <span
+                                                class="overlay"></span> </a>
+                                        <figcaption><a
+                                                href="singel/{{$category->lastNews[0]->id}}">{{$category->lastNews[0]->title}}</a>
+                                        </figcaption>
+                                        <p>{{$category->lastNews[0]->text1}}</p>
+                                    </figure>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="single_post_content_right">
+                        <ul class="spost_nav">
+
+                                @foreach($category->news as $val)
+                                    <li>
+                                        <div class="media wow fadeInDown"><a href="singel/{{$val->id}}"
+                                                                             class="media-left">
+                                                <img alt="" src="../../public/items/{{$val->imgName}}"> </a>
+                                            <div class="media-body"><a href="singel/{{$val->id}}"
+                                                                       class="catg_title"> {{$val->title}}</a></div>
+                                        </div>
+                                    </li>
+                                @endforeach
+
+                        </ul>
+                    </div>
+                    @endif
+                </div>
+                    @endforeach
+                @endif
+                {{--oder news start--}}
             </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4">
@@ -176,7 +221,8 @@
                     <h2><span>Հովանավոր</span></h2>
                     @if(isset($sponsors))
                         @foreach($sponsors as $val)
-                            <a class="sideAdd" href="{{$val->link}}"><img src="../../public/sponsorsImg/{{$val->sponsorImg}}" alt=""></a>
+                            <a class="sideAdd" href="{{$val->link}}"><img
+                                    src="../../public/sponsorsImg/{{$val->sponsorImg}}" alt=""></a>
                         @endforeach
                     @endif
                 </div>

@@ -2,12 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4ffe40c-9396-4086-8d09-995d2cd23799" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/adminPages/createCategory.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminPagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminPagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/admin/admin_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/admin/admin_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/aboutUs.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/aboutUs.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/admin_home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/admin_home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/deleteNews.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/deleteNews.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/deleteSponsor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/deleteSponsor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/messagesList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/messagesList.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/news.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/singelMessage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/singelMessage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/slider.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/adminPages/sponsor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminPages/sponsor.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/includes/contentSection.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/contentSection.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +149,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/arxivFrelans/Paypal" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -226,6 +235,10 @@
       <workItem from="1613328004028" duration="3384000" />
       <workItem from="1613393627155" duration="657000" />
       <workItem from="1613980777374" duration="7563000" />
+      <workItem from="1615305622634" duration="318000" />
+      <workItem from="1615373173723" duration="2704000" />
+      <workItem from="1615536631593" duration="653000" />
+      <workItem from="1615645379179" duration="13525000" />
     </task>
     <servers />
   </component>

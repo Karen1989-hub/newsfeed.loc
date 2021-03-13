@@ -9,7 +9,7 @@
                 <li><a class="slide-item" href="{{route('getRunningLine')}}">Վազող տող</a></li>
                 <li><a class="slide-item" href="{{route('getSlider')}}">Սլայդեր</a></li>
                 <li><a class="slide-item" href="{{route('getNews')}}">Նորություններ (News)</a></li>
-                <li><a class="slide-item active" href="{{route('getSponsor')}}">Հովանավոր (Sponsor)</a></li>
+                <li><a class="slide-item" href="{{route('getSponsor')}}">Հովանավոր (Sponsor)</a></li>
                 <li><a class="slide-item" href="{{route('getDeleteNewsPage')}}">Ջնջել հայտարարությունը</a></li>
                 <li><a class="slide-item" href="{{route('getDeleteSponsorPage')}}">Ջնջել հովանավորին</a></li>
             </ul>
@@ -26,7 +26,17 @@
                                                                                    title="ti-bag"></i><span
                     class="side-menu__label">Նամակներ</span><i class="angle fa fa-angle-right"></i></a>
             <ul class="slide-menu">
-                <li><a class="slide-item active" href="{{route('messagesList')}}">Նամակներ</a></li>
+                <li><a class="slide-item" href="{{route('messagesList')}}">Նամակներ</a></li>
+
+            </ul>
+        </li>
+        <li class="slide">
+            <a class="side-menu__item" data-toggle="slide" href="index-2.html#"><i class="side-menu__icon ti-bag"
+                                                                                   data-toggle="tooltip"
+                                                                                   title="ti-bag"></i><span
+                    class="side-menu__label">Կատեգորիաներ</span><i class="angle fa fa-angle-right"></i></a>
+            <ul class="slide-menu">
+                <li><a class="slide-item" href="{{route('getCategorys')}}">Ավելացնել կատեգորիա</a></li>
 
             </ul>
         </li>

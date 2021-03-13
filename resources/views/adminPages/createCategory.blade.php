@@ -13,11 +13,14 @@
                 <li><a class="slide-item" href="{{route('getNews')}}">Նորություններ (News)</a></li>
                 <li><a class="slide-item" href="{{route('getSponsor')}}">Հովանավոր (Sponsor)</a></li>
                 <li><a class="slide-item" href="{{route('getDeleteNewsPage')}}">Ջնջել հայտարարությունը</a></li>
-                <li><a class="slide-item active" href="{{route('getDeleteSponsorPage')}}">Ջնջել հովանավորին</a></li>
+                <li><a class="slide-item" href="{{route('getDeleteSponsorPage')}}">Ջնջել հովանավորին</a></li>
             </ul>
         </li>
         <li class="slide">
-            <a class="side-menu__item" data-toggle="slide" href="index-2.html#"><i class="side-menu__icon fa fa-dollar" data-toggle="tooltip" title="fa fa-dollar"></i><span class="side-menu__label">Մեր մասին</span><i class="angle fa fa-angle-right"></i></a>
+            <a class="side-menu__item" data-toggle="slide" href="index-2.html#"><i class="side-menu__icon fa fa-dollar"
+                                                                                   data-toggle="tooltip"
+                                                                                   title="fa fa-dollar"></i><span
+                    class="side-menu__label">Մեր մասին</span><i class="angle fa fa-angle-right"></i></a>
             <ul class="slide-menu">
                 <li><a class="slide-item" href="{{route('getAboutUsPage')}}">Մեր մասին</a></li>
             </ul>
@@ -38,7 +41,7 @@
                                                                                    title="ti-bag"></i><span
                     class="side-menu__label">Կատեգորիաներ</span><i class="angle fa fa-angle-right"></i></a>
             <ul class="slide-menu">
-                <li><a class="slide-item" href="{{route('getCategorys')}}">Ավելացնել կատեգորիա</a></li>
+                <li><a class="slide-item active" href="#">Ավելացնել կատեգորիա</a></li>
 
             </ul>
         </li>
@@ -53,37 +56,43 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <div class="card-title">Հովանավորների ցուցակ</div>
+                        <div class="card-title">Ավելացնել Կատեգորիա</div>
                     </div>
                     <div class="card-body p-6">
                         <div class="wizard-container">
                             <div class="wizard-card m-0" data-color="red" id="wizardProfile">
+                                @if ($errors->has('title'))
+                                    {{$errors->first('title')}}
+                                @endif
+                                <form class="card" action="{{route('createCategory')}}" method="post"
+                                      enctype='multipart/form-data'>
+                                    @csrf
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label class="form-label">Նոր կատեգորիաի անունը</label>
+                                            <input type="text" class="form-control" value="{{ old('title') }}"
+                                                   name="name" placeholder="Անունը" style="padding-left: 10px">
+                                            <strong style="color: red"></strong>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-block">Հաստատել</button>
+                                </form>
+                                    <!-- table start -->
+                                    <div class="table-responsive">
+                                        <table class="table table-inbox table-hover text-nowrap">
+                                            <tbody>
+                                            @if(count($categories) > 0)
+                                                @foreach($categories as $val)
+                                                    <tr style="text-align: center">
 
-                                <!-- start list -->
-                                <div class="row row-deck">
-                                    @if(isset($sponsors))
-                                        @foreach($sponsors as $val)
-                                            <div class="col-md-12 col-lg-12 col-xl-4">
-                                                <div class="card card-blog-overlay" style="background-image: url('../../public/sponsorsImg/{{$val->sponsorImg}}');height: 200px">
-                                                    <div class="card-header z-index2 ">
-
-                                                        <div class="card-options">
-                                                            <a href="#" class="card-options-collapse"
-                                                               data-toggle="card-collapse"><i
-                                                                    class="fe fe-chevron-up text-white"></i></a>
-                                                            <a href="deleteSponsor/{{$val->id}}" class="card-options-remove" data-toggle=""><i
-                                                                    class="fe fe-x text-white"></i></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-body  text-white">
-                                                        {{$val->text1}}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        @endforeach
-                                    @endif
-                                </div>
-                                <!-- end list -->
+                                                        <td class="view-message inbox-small-cells">{{$val->name}}</td>
+                                                    </tr>
+                                                @endforeach
+                                            @endif
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- table end -->
                             </div>
                         </div> <!-- wizard container -->
                     </div>

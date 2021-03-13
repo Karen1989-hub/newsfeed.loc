@@ -17,7 +17,10 @@
             </ul>
         </li>
         <li class="slide">
-            <a class="side-menu__item" data-toggle="slide" href="index-2.html#"><i class="side-menu__icon fa fa-dollar" data-toggle="tooltip" title="fa fa-dollar"></i><span class="side-menu__label">Մեր մասին</span><i class="angle fa fa-angle-right"></i></a>
+            <a class="side-menu__item" data-toggle="slide" href="index-2.html#"><i class="side-menu__icon fa fa-dollar"
+                                                                                   data-toggle="tooltip"
+                                                                                   title="fa fa-dollar"></i><span
+                    class="side-menu__label">Մեր մասին</span><i class="angle fa fa-angle-right"></i></a>
             <ul class="slide-menu">
                 <li><a class="slide-item" href="{{route('getAboutUsPage')}}">Մեր մասին</a></li>
             </ul>
@@ -28,7 +31,17 @@
                                                                                    title="ti-bag"></i><span
                     class="side-menu__label">Նամակներ</span><i class="angle fa fa-angle-right"></i></a>
             <ul class="slide-menu">
-                <li><a class="slide-item active" href="{{route('messagesList')}}">Նամակներ</a></li>
+                <li><a class="slide-item" href="{{route('messagesList')}}">Նամակներ</a></li>
+
+            </ul>
+        </li>
+        <li class="slide">
+            <a class="side-menu__item" data-toggle="slide" href="index-2.html#"><i class="side-menu__icon ti-bag"
+                                                                                   data-toggle="tooltip"
+                                                                                   title="ti-bag"></i><span
+                    class="side-menu__label">Կատեգորիաներ</span><i class="angle fa fa-angle-right"></i></a>
+            <ul class="slide-menu">
+                <li><a class="slide-ite" href="{{route('getCategorys')}}">Ավելացնել կատեգորիա</a></li>
 
             </ul>
         </li>
@@ -49,7 +62,7 @@
                         <div class="wizard-container">
                             <div class="wizard-card m-0" data-color="red" id="wizardProfile">
                                 @if ($errors->has('title'))
-                                  {{$errors->first('title')}}
+                                    {{$errors->first('title')}}
                                 @endif
                                 <form class="card" action="{{route('setNews')}}" method="post"
                                       enctype='multipart/form-data'>
@@ -59,9 +72,9 @@
                                             <label class="form-label">Նշել վերնագիրը</label>
                                             <input type="text" class="form-control" value="{{ old('title') }}"
                                                    name="title" placeholder="Վերնագիր" style="padding-left: 10px">
-                                           <strong style="color: red"> @if ($errors->has('title'))
-                                                {{$errors->first('title')}}
-                                            @endif</strong>
+                                            <strong style="color: red"> @if ($errors->has('title'))
+                                                    {{$errors->first('title')}}
+                                                @endif</strong>
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-file">
@@ -98,6 +111,11 @@
                                                 <option value="sport">Սպորտ</option>
                                                 <option value="technology">Տեխնոլոգիաներ</option>
                                                 <option value="medicine">Բժշկություն</option>
+                                                @if(count($categories)>0)
+                                                    @foreach($categories as $val)
+                                                        <option value="{{$val->name}}">{{$val->name}}</option>
+                                                    @endforeach
+                                                @endif
                                             </select>
                                         </div>
 

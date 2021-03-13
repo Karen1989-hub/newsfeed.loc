@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\News;
 use App\Models\Advertising;
 use App\Models\AboutUs;
+use App\Models\Catagory;
 
 
 class FrontController extends Controller
@@ -33,6 +34,7 @@ class FrontController extends Controller
         $lifeStyle = News::where('firstCategory', '=', 'life')->orderBy('id', 'desc')->limit(5)->get();
 
         $newsfeed = News::orderBy('id', 'desc')->limit(5)->get();
+        $oderNews = Catagory::all();
 
         $sponsors = Advertising::all();
 
@@ -44,7 +46,8 @@ class FrontController extends Controller
             'medicine' => $medicine, 'medicineLast' => $medicineLast,
             'lifeStyle' => $lifeStyle,
             'newsfeed' => $newsfeed,
-            'sponsors' => $sponsors
+            'sponsors' => $sponsors,
+            'oderNews' => $oderNews
         ];
         return view('home', $arr);
     }
