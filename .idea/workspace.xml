@@ -133,9 +133,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../candyShop.loc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -233,6 +234,8 @@
       <workItem from="1616182974918" duration="734000" />
       <workItem from="1616227225105" duration="1290000" />
       <workItem from="1616414423270" duration="2067000" />
+      <workItem from="1619876142965" duration="461000" />
+      <workItem from="1619877179866" duration="2909000" />
     </task>
     <servers />
   </component>
